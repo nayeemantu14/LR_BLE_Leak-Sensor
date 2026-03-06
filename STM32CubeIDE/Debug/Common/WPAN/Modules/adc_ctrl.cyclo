@@ -1,3 +1,4 @@
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2054:22:LL_RCC_SetADCClockSource	1
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:1947:22:LL_ADC_SetCommonPathInternalCh	1
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:2273:22:LL_ADC_SetLPModeAutoPowerOff	1
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:2309:22:LL_ADC_SetLPModeAutonomousDPD	1
@@ -28,15 +29,14 @@
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4500:26:LL_ADC_IsActiveFlag_EOC	2
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4591:22:LL_ADC_ClearFlag_ADRDY	1
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4613:22:LL_ADC_ClearFlag_EOC	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2054:22:LL_RCC_SetADCClockSource	1
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:1045:22:LL_AHB4_GRP1_EnableClock	1
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:1079:22:LL_AHB4_GRP1_DisableClock	1
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/adc_ctrl.c:199:29:ADCCTRL_Init	2
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/adc_ctrl.c:232:29:ADCCTRL_RegisterHandle	4
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/adc_ctrl.c:266:29:ADCCTRL_RequestIpState	4
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/adc_ctrl.c:306:29:ADCCTRL_RequestRawValue	10
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/adc_ctrl.c:367:29:ADCCTRL_RequestTemperature	12
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/adc_ctrl.c:520:29:ADCCTRL_RequestCoreVoltage	10
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/adc_ctrl.c:367:29:ADCCTRL_RequestTemperature	14
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/adc_ctrl.c:520:29:ADCCTRL_RequestCoreVoltage	12
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/adc_ctrl.c:645:29:ADCCTRL_RequestRefVoltage	10
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/adc_ctrl.c:717:6:AdcActivate	5
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/adc_ctrl.c:801:6:AdcDeactivate	5

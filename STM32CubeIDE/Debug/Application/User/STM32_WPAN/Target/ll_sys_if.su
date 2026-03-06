@@ -1,12 +1,11 @@
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:1826:26:LL_RCC_RADIO_GetSleepTimerClockSource	4	static
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_system.h:956:26:LL_DBGMCU_GetRevisionID	4	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:91:6:ll_sys_bg_process_init	8	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:102:6:ll_sys_schedule_bg_process	8	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:112:6:ll_sys_schedule_bg_process_isr	8	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:122:6:ll_sys_config_params	8	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:168:6:ll_sys_bg_temperature_measurement_init	8	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:179:6:ll_sys_bg_temperature_measurement	8	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:196:9:ll_sys_BLE_sleep_clock_accuracy_selection	24	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:243:6:ll_sys_sleep_clock_source_selection	16	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:271:6:ll_sys_reset	16	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:323:6:ll_sys_get_ble_profile_statistics	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:94:6:ll_sys_bg_process_init	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:105:6:ll_sys_schedule_bg_process	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:115:6:ll_sys_schedule_bg_process_isr	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:125:6:ll_sys_config_params	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:171:6:ll_sys_bg_temperature_measurement_init	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:182:6:ll_sys_bg_temperature_measurement	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:199:9:ll_sys_BLE_sleep_clock_accuracy_selection	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:246:6:ll_sys_sleep_clock_source_selection	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:274:6:ll_sys_reset	16	static

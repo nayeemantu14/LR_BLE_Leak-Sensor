@@ -39,7 +39,7 @@
 /**
  * Define Tx Power
  */
-#define CFG_TX_POWER                      (0x19) /* 0x19 <=> -0.3 dBm */
+#define CFG_TX_POWER                      (0x1F) /* 0x1F <=> 5.6 dBm */
 
 /**
  * Definition of public BD Address,
@@ -65,9 +65,9 @@
  */
 #define CFG_BD_ADDRESS_TYPE               (GAP_PUBLIC_ADDR)
 
-#define ADV_INTERVAL_MIN                  (20)
-#define ADV_INTERVAL_MAX                  (30)
-#define ADV_LP_INTERVAL_MIN               (1600)
+#define ADV_INTERVAL_MIN                  (500)
+#define ADV_INTERVAL_MAX                  (700)
+#define ADV_LP_INTERVAL_MIN               (1000)
 #define ADV_LP_INTERVAL_MAX               (4000)
 #define ADV_TYPE                          ADV_IND
 #define ADV_FILTER                        NO_WHITE_LIST_USE
@@ -117,7 +117,6 @@
 /*****************************************************/
 
 /* USER CODE BEGIN Specific_Parameters */
-#define PKA_INTR_PRIO_PROCEND    (15U)
 /* USER CODE END Specific_Parameters */
 
 /******************************************************************************
@@ -129,7 +128,7 @@
 #define CFG_BLE_OPTIONS             (0 | \
                                      0 | \
                                      0 | \
-                                     0 | \
+                                     BLE_OPTIONS_EXTENDED_ADV | \
                                      0 | \
                                      0 | \
                                      0 | \
@@ -161,7 +160,7 @@
  * Maximum supported ATT_MTU size
  * This setting should be aligned with ATT_MTU value configured in the ble host
  */
-#define CFG_BLE_ATT_MTU_MAX         (251)
+#define CFG_BLE_ATT_MTU_MAX         (512)
 
 /**
  * Size of the storage area for Attribute values
@@ -199,17 +198,17 @@
 /**
  * Size of the RAM buffer allocated to store BLE host events
  */
-#define CFG_BLE_HOST_EVENT_BUF_SIZE   (512)
+#define CFG_BLE_HOST_EVENT_BUF_SIZE   (1536)
 
 /**
  * Size of the RAM buffer allocated for the extension of BLE host commands
  */
-#define CFG_BLE_EXTRA_DATA_BUF_SIZE (0)
+#define CFG_BLE_EXTRA_DATA_BUF_SIZE (512)
 
 /**
  * Size of the RAM buffer allocated for long write commands, can be 0 or 256.
  */
-#define CFG_BLE_LONG_WRITE_DATA_BUF_SIZE (0)
+#define CFG_BLE_LONG_WRITE_DATA_BUF_SIZE (256)
 
 /**
  * Appearance of device set into BLE GAP
@@ -227,8 +226,8 @@
  * PHY preferences
  */
 #define CFG_PHY_PREF                  (0)
-#define CFG_PHY_PREF_TX               (HCI_TX_PHYS_LE_2M_PREF)
-#define CFG_PHY_PREF_RX               (HCI_RX_PHYS_LE_2M_PREF)
+#define CFG_PHY_PREF_TX               (HCI_TX_PHYS_LE_CODED_PREF)
+#define CFG_PHY_PREF_RX               (HCI_RX_PHYS_LE_CODED_PREF)
 
 /* USER CODE BEGIN BLE_Stack */
 
@@ -242,10 +241,10 @@
  *   - 1 : Low power active, mode(s) selected with CFG_LPM_mode_SUPPORTED
  *   - 2 : In addition log and debug are disabled to reach lowest power figures.
  ******************************************************************************/
-#define CFG_LPM_LEVEL               (0U)
+#define CFG_LPM_LEVEL               (1U)
 
-#define CFG_LPM_STOP1_SUPPORTED     (0U)
-#define CFG_LPM_STANDBY_SUPPORTED   (0U)
+#define CFG_LPM_STOP1_SUPPORTED     (1U)
+#define CFG_LPM_STANDBY_SUPPORTED   (1U)
 
 /**
  * Defines to use dynamic low power wakeup time profilling.
@@ -273,6 +272,7 @@ typedef enum
   CFG_LPM_LOG,
   CFG_LPM_LL_DEEPSLEEP,
   CFG_LPM_LL_HW_RCO_CLBR,
+  CFG_LPM_PKA_OVR_IT,
   /* USER CODE BEGIN CFG_LPM_Id_t */
 
   /* USER CODE END CFG_LPM_Id_t */
@@ -394,22 +394,14 @@ typedef enum
 #define UTIL_SEQ_CONF_PRIO_NBR              CFG_SEQ_PRIO_NBR
 
 /**
- * This is a bit mapping over 32bits listing all events id supported in the application
- */
-typedef enum
-{
-  CFG_IDLEEVT_PROC_GAP_COMPLETE,
-  /* USER CODE BEGIN CFG_IdleEvt_Id_t */
-
-  /* USER CODE END CFG_IdleEvt_Id_t */
-} CFG_IdleEvt_Id_t;
-
-/**
  * These are the lists of events id registered to the sequencer
  * Each event id shall be in the range [0:31]
  */
 typedef enum
 {
+  CFG_PKA_MUTEX,
+  CFG_PKA_END_OF_PROCESS,
+  CFG_EVENT_PROC_GAP_COMPLETE,
   /* USER CODE BEGIN CFG_Event_Id_t */
 
   /* USER CODE END CFG_Event_Id_t */
@@ -486,8 +478,8 @@ typedef enum
 #define RCC_INTR_PRIO                       (1)           /* HSERDY and PLL1RDY */
 
 /* RF TX power table ID selection:
- *   0 -> RF TX output level from -20 dBm to +10 dBm, with VDDRFPA at VDD level.
- *   1 -> RF TX output level from -20 dBm to +3 dBm, with VDDRFPA at VDD11 level like on ST MB1803 and MB2130 boards.
+ *   0 -> RF TX output level from -20 dBm to +10 dBm. VDDRFPA at VDD level.
+ *   1 -> RF TX output level from -20 dBm to +3 dBm. VDDRFPA at VDD11 level like on ST MB1803 and MB2130 boards.
  */
 #define CFG_RF_TX_POWER_TABLE_ID            (0)
 
@@ -511,6 +503,12 @@ typedef enum
 /* USER CODE BEGIN HW_RNG_Configuration */
 
 /* USER CODE END HW_RNG_Configuration */
+
+/******************************************************************************
+ * PKA configuration
+ ******************************************************************************/
+/* PKA IRQ priority of the PKA end of process */
+#define PKA_INTR_PRIO_PROCEND               (7)
 
 /******************************************************************************
  * MEMORY MANAGER

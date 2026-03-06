@@ -1,10 +1,5 @@
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Utilities/lpm/tiny_lpm/stm32_lpm.c:186:13:LPM_SleepMode	16	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Utilities/lpm/tiny_lpm/stm32_lpm.c:202:13:LPM_Stop1Mode	16	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Utilities/lpm/tiny_lpm/stm32_lpm.c:218:13:LPM_StandbyMode	16	static
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Utilities/lpm/tiny_lpm/stm32_lpm.c:241:6:UTIL_LPM_Init	16	static
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Utilities/lpm/tiny_lpm/stm32_lpm.c:270:6:UTIL_LPM_DeInit	4	static
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Utilities/lpm/tiny_lpm/stm32_lpm.c:286:6:UTIL_LPM_SetMaxMode	32	static,ignoring_inline_asm
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Utilities/lpm/tiny_lpm/stm32_lpm.c:314:9:UTIL_LPM_GetMaxMode	24	static,ignoring_inline_asm
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Utilities/lpm/tiny_lpm/stm32_lpm.c:345:6:UTIL_LPM_Enter	32	static,ignoring_inline_asm
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Utilities/lpm/tiny_lpm/stm32_lpm.c:378:6:UTIL_LPM_SetOffMode	32	static,ignoring_inline_asm
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Utilities/lpm/tiny_lpm/stm32_lpm.c:430:6:UTIL_LPM_SetStopMode	32	static,ignoring_inline_asm

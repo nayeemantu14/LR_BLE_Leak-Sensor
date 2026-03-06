@@ -1,3 +1,4 @@
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2054:22:LL_RCC_SetADCClockSource	16	static
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:1947:22:LL_ADC_SetCommonPathInternalCh	16	static
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:2273:22:LL_ADC_SetLPModeAutoPowerOff	16	static
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:2309:22:LL_ADC_SetLPModeAutonomousDPD	16	static
@@ -28,7 +29,6 @@
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4500:26:LL_ADC_IsActiveFlag_EOC	16	static
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4591:22:LL_ADC_ClearFlag_ADRDY	16	static
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4613:22:LL_ADC_ClearFlag_EOC	16	static
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2054:22:LL_RCC_SetADCClockSource	16	static
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:1045:22:LL_AHB4_GRP1_EnableClock	24	static
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:1079:22:LL_AHB4_GRP1_DisableClock	16	static
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/adc_ctrl.c:199:29:ADCCTRL_Init	16	static

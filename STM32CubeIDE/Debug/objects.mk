@@ -5,5 +5,5 @@
 
 USER_OBJS :=
 
-LIBS := -l:WBA5_LinkLayer_BLE_Basic_lib.a -l:stm32wba_ble_stack_basic.a
+LIBS := -l:WBA5_LinkLayer_BLE_Basic_Plus_lib.a -l:stm32wba_ble_stack_basic_plus.a
 

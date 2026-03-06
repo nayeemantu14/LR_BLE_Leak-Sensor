@@ -26,10 +26,10 @@ C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Tar
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:507:6:LINKLAYER_PLAT_StartRadioEvt	8	static
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:521:6:LINKLAYER_PLAT_StopRadioEvt	8	static
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:535:6:LINKLAYER_PLAT_RCOStartClbr	8	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:553:6:LINKLAYER_PLAT_RCOStopClbr	8	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:569:6:LINKLAYER_PLAT_RequestTemperature	8	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:581:6:LINKLAYER_PLAT_PhyStartClbr	4	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:597:6:LINKLAYER_PLAT_PhyStopClbr	4	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:613:6:LINKLAYER_PLAT_SCHLDR_TIMING_UPDATE_NOT	16	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:625:10:LINKLAYER_PLAT_GetSTCompanyID	8	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:635:10:LINKLAYER_PLAT_GetUDN	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:551:6:LINKLAYER_PLAT_RCOStopClbr	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:566:6:LINKLAYER_PLAT_RequestTemperature	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:578:6:LINKLAYER_PLAT_PhyStartClbr	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:594:6:LINKLAYER_PLAT_PhyStopClbr	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:610:6:LINKLAYER_PLAT_SCHLDR_TIMING_UPDATE_NOT	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:622:10:LINKLAYER_PLAT_GetSTCompanyID	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/linklayer_plat.c:632:10:LINKLAYER_PLAT_GetUDN	8	static

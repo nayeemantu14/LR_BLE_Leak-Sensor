@@ -1,10 +1,9 @@
-/*$Id: //dwh/bluetooth/DWC_ble154combo/firmware/rel/2.00a-lca01/firmware/public_inc/ll_fw_config.h#1 $*/
+/*$Id: //dwh/bluetooth/DWC_ble154combo/firmware/rel/2.00a-lca04/firmware/public_inc/ll_fw_config.h#1 $*/
 /**
  ********************************************************************************
  * @file    ll_fw_config.h
  * @brief   This file contains the major configurations to the BLE controller.
  ******************************************************************************
- * @copy
  * This Synopsys DWC Bluetooth Low Energy Combo Link Layer/MAC software and
  * associated documentation ( hereinafter the "Software") is an unsupported
  * proprietary work of Synopsys, Inc. unless otherwise expressly agreed to in
@@ -46,7 +45,7 @@
 /*Configurations of BLE will apply only when BLE is enabled*/
 
 /* Variant configuration */
-#define CFG_LL_BLE_BASIC                            1
+#define CFG_LL_BLE_BASIC_PLUS                           1
 #define CFG_LL_BLE_INTERFACE_COMPATIBILITY          1
 
 /* Roles configurations */
@@ -76,7 +75,7 @@
 #endif /* SUPPORT_PRIVACY */
 
 #ifndef SUPPORT_LE_EXTENDED_ADVERTISING
-#define SUPPORT_LE_EXTENDED_ADVERTISING             0 /* Enable\Disable Extended advertising feature. Enable:1 - Disable:0 */
+#define SUPPORT_LE_EXTENDED_ADVERTISING             1 /* Enable\Disable Extended advertising feature. Enable:1 - Disable:0 */
 #endif /* SUPPORT_LE_EXTENDED_ADVERTISING */
 
 #ifndef SUPPORT_LE_PERIODIC_ADVERTISING
@@ -96,7 +95,7 @@
 #endif /* SUPPORT_PERIODIC_SYNC_TRANSFER */
 
 #ifndef SUPPORT_SLEEP_CLOCK_ACCURCY_UPDATES
-#define SUPPORT_SLEEP_CLOCK_ACCURCY_UPDATES         1 /* Enable\Disable Sleep Clock Accuracy Updates Feature. Enable:1 - Disable:0 */
+#define SUPPORT_SLEEP_CLOCK_ACCURCY_UPDATES         0 /* Enable\Disable Sleep Clock Accuracy Updates Feature. Enable:1 - Disable:0 */
 #endif /* SUPPORT_SLEEP_CLOCK_ACCURCY_UPDATES */
 
 #ifndef SUPPORT_CONNECTED_ISOCHRONOUS
@@ -112,7 +111,7 @@
 #endif /* SUPPORT_SYNC_ISOCHRONOUS */
 
 #ifndef SUPPORT_LE_POWER_CONTROL
-#define SUPPORT_LE_POWER_CONTROL                    0 /* Enable\Disable LE Power Control Feature. Enable:1 - Disable:0 */
+#define SUPPORT_LE_POWER_CONTROL                    1 /* Enable\Disable LE Power Control Feature. Enable:1 - Disable:0 */
 #endif /* SUPPORT_LE_POWER_CONTROL */
 
 #ifndef SUPPORT_CHANNEL_CLASSIFICATION
@@ -124,11 +123,11 @@
 #endif /* SUPPORT_PERIODIC_ADV_ADI */
 
 #ifndef SUPPORT_LE_ENHANCED_CONN_UPDATE
-#define SUPPORT_LE_ENHANCED_CONN_UPDATE             0
+#define SUPPORT_LE_ENHANCED_CONN_UPDATE             1
 #endif /* SUPPORT_LE_ENHANCED_CONN_UPDATE */
 
 #ifndef SUPPORT_CSSA
-#define SUPPORT_CSSA                                0 /* Enable\Disable Coding Selection Scheme on Advertising Feature. Enable:1 - Disable:0 */
+#define SUPPORT_CSSA                                1 /* Enable\Disable Coding Selection Scheme on Advertising Feature. Enable:1 - Disable:0 */
 #endif /* SUPPORT_CSSA */
 
 #ifndef SUPPORT_LE_PAWR_ADVERTISER_ROLE
@@ -194,12 +193,16 @@
 #define CHECK_ANY_MISSED_EVENT_ON_DEEP_SLEEP_EXIT   1 /* Enable\Disable calling event scheduler handler function at the end of deep sleep exit*/
 #endif /* CHECK_ANY_MISSED_EVENT_ON_DEEP_SLEEP_EXIT */
 
+#ifndef SUPPORT_AUTONOMOUS_POWER_CONTROL_REQ
+#define SUPPORT_AUTONOMOUS_POWER_CONTROL_REQ        1
+#endif /* SUPPORT_AUTONOMOUS_POWER_CONTROL_REQ */
+
 #ifndef SUPPORT_PROFILE
 #define SUPPORT_PROFILE                             PROFILE_LIGHTWEIGHT /* Enable\Disable profiling LL timing framework */
 #endif /* SUPPORT_PROFILE */
 
 #ifndef LL_BASIC
-#define LL_BASIC                                    1
+#define LL_BASIC                                    0
 #endif /* LL_BASIC */
 
 /*************************** MAC Configuration *************************************/
@@ -207,7 +210,6 @@
 #ifndef FFD_DEVICE_CONFIG
 #define FFD_DEVICE_CONFIG                           0 /* Enable\Disable FFD:1 - RFD:0 */
 #endif /* FFD_DEVICE_CONFIG */
-
 #ifdef SUPPORT_AUG_MAC_HCI_UART
 #ifndef RAL_NUMBER_OF_INSTANCE
 #define RAL_NUMBER_OF_INSTANCE                      0 /* The Number of RAL instances supported */

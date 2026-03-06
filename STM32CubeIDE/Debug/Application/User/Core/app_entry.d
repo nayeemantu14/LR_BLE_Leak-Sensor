@@ -16,6 +16,9 @@ Application/User/Core/app_entry.o: \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_def.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_dma_ex.h \
+ ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc.h \
+ ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h \
+ ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc_ex.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_adc.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_adc_ex.h \
@@ -32,9 +35,6 @@ Application/User/Core/app_entry.o: \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_pwr.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_pwr_ex.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_ramcfg.h \
- ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc.h \
- ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h \
- ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc_ex.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rng.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rng_ex.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rtc.h \
@@ -63,7 +63,7 @@ Application/User/Core/app_entry.o: \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/common_types.h \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/_40nm_reg_files/DWC_ble154combo.h \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/bsp.h \
- ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/config/ble_basic/ll_fw_config.h \
+ ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/config/ble_basic_plus/ll_fw_config.h \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/mem_intf.h \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/os_wrapper.h \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/pta.h \
@@ -82,6 +82,7 @@ Application/User/Core/app_entry.o: \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h \
  ../../Core/Inc/app_entry.h ../../Core/Inc/stm32_rtos.h \
  ../../Utilities/sequencer/stm32_seq.h \
+ ../../Utilities/lpm/tiny_lpm/stm32_lpm.h \
  ../../Utilities/tim_serv/stm32_timer.h \
  ../../Projects/Common/WPAN/Modules/MemoryManager/advanced_memory_manager.h \
  ../../Projects/Common/WPAN/Modules/stm_list.h \
@@ -110,6 +111,7 @@ Application/User/Core/app_entry.o: \
  ../../Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter_common.h \
  ../../Projects/Common/WPAN/Modules/adc_ctrl.h \
  ../../Projects/Common/WPAN/Modules/temp_measurement.h \
+ ../../System/Interfaces/stm32_lpm_if.h \
  ../../Projects/Common/WPAN/Interfaces/app_bsp.h \
  ../../Drivers/BSP/B-WBA5M-WPAN/b_wba5m_wpan.h \
  ../../Core/Inc/b_wba5m_wpan_conf.h \
@@ -131,6 +133,9 @@ Application/User/Core/app_entry.o: \
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_def.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_dma_ex.h:
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc.h:
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc_ex.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_adc.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_adc_ex.h:
@@ -147,9 +152,6 @@ Application/User/Core/app_entry.o: \
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_pwr.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_pwr_ex.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_ramcfg.h:
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc.h:
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc_ex.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rng.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rng_ex.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rtc.h:
@@ -180,7 +182,7 @@ Application/User/Core/app_entry.o: \
 ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/common_types.h:
 ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/_40nm_reg_files/DWC_ble154combo.h:
 ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/bsp.h:
-../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/config/ble_basic/ll_fw_config.h:
+../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/config/ble_basic_plus/ll_fw_config.h:
 ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/mem_intf.h:
 ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/os_wrapper.h:
 ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/pta.h:
@@ -202,6 +204,7 @@ Application/User/Core/app_entry.o: \
 ../../Core/Inc/app_entry.h:
 ../../Core/Inc/stm32_rtos.h:
 ../../Utilities/sequencer/stm32_seq.h:
+../../Utilities/lpm/tiny_lpm/stm32_lpm.h:
 ../../Utilities/tim_serv/stm32_timer.h:
 ../../Projects/Common/WPAN/Modules/MemoryManager/advanced_memory_manager.h:
 ../../Projects/Common/WPAN/Modules/stm_list.h:
@@ -230,6 +233,7 @@ Application/User/Core/app_entry.o: \
 ../../Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter_common.h:
 ../../Projects/Common/WPAN/Modules/adc_ctrl.h:
 ../../Projects/Common/WPAN/Modules/temp_measurement.h:
+../../System/Interfaces/stm32_lpm_if.h:
 ../../Projects/Common/WPAN/Interfaces/app_bsp.h:
 ../../Drivers/BSP/B-WBA5M-WPAN/b_wba5m_wpan.h:
 ../../Core/Inc/b_wba5m_wpan_conf.h:

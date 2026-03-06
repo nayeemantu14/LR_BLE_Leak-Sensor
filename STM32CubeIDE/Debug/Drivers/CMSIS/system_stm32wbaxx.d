@@ -14,6 +14,9 @@ Drivers/CMSIS/system_stm32wbaxx.o: \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_def.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_dma_ex.h \
+ ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc.h \
+ ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h \
+ ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc_ex.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_adc.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_adc_ex.h \
@@ -30,9 +33,6 @@ Drivers/CMSIS/system_stm32wbaxx.o: \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_pwr.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_pwr_ex.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_ramcfg.h \
- ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc.h \
- ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h \
- ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc_ex.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rng.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rng_ex.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rtc.h \
@@ -53,6 +53,9 @@ Drivers/CMSIS/system_stm32wbaxx.o: \
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_def.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_dma_ex.h:
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc.h:
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc_ex.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_adc.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_adc_ex.h:
@@ -69,9 +72,6 @@ Drivers/CMSIS/system_stm32wbaxx.o: \
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_pwr.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_pwr_ex.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_ramcfg.h:
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc.h:
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc_ex.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rng.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rng_ex.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rtc.h:

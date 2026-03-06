@@ -83,6 +83,18 @@ void MX_ICACHE_Init(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define MSense_Pin GPIO_PIN_13
+#define MSense_GPIO_Port GPIOC
+#define MSense_EXTI_IRQn EXTI13_IRQn
+#define LR_BUT_Pin GPIO_PIN_7
+#define LR_BUT_GPIO_Port GPIOB
+#define LR_BUT_EXTI_IRQn EXTI7_IRQn
+#define BAT_Read_Pin GPIO_PIN_5
+#define BAT_Read_GPIO_Port GPIOB
+#define Alarm_Led_Pin GPIO_PIN_1
+#define Alarm_Led_GPIO_Port GPIOB
+#define Buzze_Pin GPIO_PIN_15
+#define Buzze_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

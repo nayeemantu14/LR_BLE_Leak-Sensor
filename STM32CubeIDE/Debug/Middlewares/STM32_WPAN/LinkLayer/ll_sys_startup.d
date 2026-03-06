@@ -1,6 +1,6 @@
 Middlewares/STM32_WPAN/LinkLayer/ll_sys_startup.o: \
  C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/link_layer/ll_sys/src/ll_sys_startup.c \
- ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/config/ble_basic/ll_fw_config.h \
+ ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/config/ble_basic_plus/ll_fw_config.h \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_sys/inc/ll_sys.h \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/ll_intf.h \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/common_types.h \
@@ -15,7 +15,7 @@ Middlewares/STM32_WPAN/LinkLayer/ll_sys_startup.o: \
  ../../Drivers/CMSIS/Include/cmsis_gcc.h \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_sys/inc/ll_sys_startup.h \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/common_types.h
-../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/config/ble_basic/ll_fw_config.h:
+../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/config/ble_basic_plus/ll_fw_config.h:
 ../../Middlewares/ST/STM32_WPAN/link_layer/ll_sys/inc/ll_sys.h:
 ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/ll_intf.h:
 ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/common_types.h:

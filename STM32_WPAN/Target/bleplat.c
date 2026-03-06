@@ -33,9 +33,8 @@
 
 void BLEPLAT_Init( void )
 {
-  BAES_Reset( );
-  PKACTRL_Reset( );
-  BLE_TIMER_Init();
+
+  return;
 }
 
 /*****************************************************************************/

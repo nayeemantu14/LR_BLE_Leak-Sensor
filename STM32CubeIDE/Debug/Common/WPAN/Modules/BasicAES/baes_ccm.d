@@ -17,6 +17,9 @@ Common/WPAN/Modules/BasicAES/baes_ccm.o: \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_def.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_dma_ex.h \
+ ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc.h \
+ ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h \
+ ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc_ex.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_adc.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_adc_ex.h \
@@ -33,9 +36,6 @@ Common/WPAN/Modules/BasicAES/baes_ccm.o: \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_pwr.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_pwr_ex.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_ramcfg.h \
- ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc.h \
- ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h \
- ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc_ex.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rng.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rng_ex.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rtc.h \
@@ -64,7 +64,7 @@ Common/WPAN/Modules/BasicAES/baes_ccm.o: \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/common_types.h \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/_40nm_reg_files/DWC_ble154combo.h \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/bsp.h \
- ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/config/ble_basic/ll_fw_config.h \
+ ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/config/ble_basic_plus/ll_fw_config.h \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/mem_intf.h \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/os_wrapper.h \
  ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/pta.h \
@@ -89,6 +89,9 @@ C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/Projects/Com
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_def.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_dma_ex.h:
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc.h:
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc_ex.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_adc.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_adc_ex.h:
@@ -105,9 +108,6 @@ C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/Projects/Com
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_pwr.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_pwr_ex.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_ramcfg.h:
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc.h:
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rcc_ex.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rng.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rng_ex.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_rtc.h:
@@ -138,7 +138,7 @@ C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/Projects/Com
 ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/common_types.h:
 ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/_40nm_reg_files/DWC_ble154combo.h:
 ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/bsp.h:
-../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/config/ble_basic/ll_fw_config.h:
+../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/config/ble_basic_plus/ll_fw_config.h:
 ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/mem_intf.h:
 ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/os_wrapper.h:
 ../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/pta.h:
