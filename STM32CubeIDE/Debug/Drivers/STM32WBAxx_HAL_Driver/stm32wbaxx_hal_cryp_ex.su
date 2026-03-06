@@ -1,0 +1,10 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cryp_ex.c:106:19:HAL_CRYPEx_AESGCM_GenerateAuthTAG	72	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cryp_ex.c:222:19:HAL_CRYPEx_AESCCM_GenerateAuthTAG	40	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cryp_ex.c:343:19:HAL_CRYPEx_WrapKey	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cryp_ex.c:408:19:HAL_CRYPEx_UnwrapKey	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cryp_ex.c:492:19:HAL_CRYPEx_EncryptSharedKey	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cryp_ex.c:564:19:HAL_CRYPEx_DecryptSharedKey	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cryp_ex.c:644:26:CRYPEx_KeyDecrypt	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cryp_ex.c:753:26:CRYPEx_KeyEncrypt	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cryp_ex.c:838:26:CRYPEx_KeyGeneration	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cryp_ex.c:906:26:CRYPEx_WaitFLAG	32	static

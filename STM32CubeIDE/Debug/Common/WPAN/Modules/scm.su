@@ -1,0 +1,79 @@
+../../Drivers/CMSIS/Include/core_cm33.h:2378:26:__NVIC_GetPriorityGrouping	4	static
+../../Drivers/CMSIS/Include/core_cm33.h:2390:22:__NVIC_EnableIRQ	16	static,ignoring_inline_asm
+../../Drivers/CMSIS/Include/core_cm33.h:2428:22:__NVIC_DisableIRQ	16	static,ignoring_inline_asm
+../../Drivers/CMSIS/Include/core_cm33.h:2481:22:__NVIC_ClearPendingIRQ	16	static
+../../Drivers/CMSIS/Include/core_cm33.h:2587:22:__NVIC_SetPriority	16	static
+../../Drivers/CMSIS/Include/core_cm33.h:2634:26:NVIC_EncodePriority	40	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:881:22:LL_RCC_HSE_Enable	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:901:26:LL_RCC_HSE_IsReady	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:912:22:LL_RCC_HSE_EnablePrescaler	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:923:26:LL_RCC_HSE_IsEnabledPrescaler	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:934:22:LL_RCC_HSE_DisablePrescaler	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:1014:22:LL_RCC_HSI_Enable	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:1034:26:LL_RCC_HSI_IsReady	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:1500:22:LL_RCC_SetSysClkSource	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:1513:26:LL_RCC_GetSysClkSource	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:1610:22:LL_RCC_SetAHB5Prescaler	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:1623:22:LL_RCC_SetAHB5Divider	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:1714:26:LL_RCC_GetAHB5Prescaler	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2411:22:LL_RCC_PLL1_Disable	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2559:22:LL_RCC_PLL1_SetMainSource	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2592:26:LL_RCC_PLL1_GetN	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2615:26:LL_RCC_PLL1_GetP	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2638:26:LL_RCC_PLL1_GetQ	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2660:26:LL_RCC_PLL1_GetR	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2680:26:LL_RCC_PLL1_GetDivider	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2754:22:LL_RCC_PLL1_EnableDomain_PLL1R	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2788:22:LL_RCC_PLL1FRACN_Enable	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2808:22:LL_RCC_PLL1FRACN_Disable	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2818:22:LL_RCC_PLL1_SetFRACN	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:2828:26:LL_RCC_PLL1_GetFRACN	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:1940:22:LL_APB2_GRP1_EnableClock	24	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pwr.h:1082:22:LL_PWR_SetRegulVoltageScaling	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pwr.h:2038:26:LL_PWR_IsActiveFlag_VOS	4	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:1767:22:LL_TIM_EnableCounter	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:1778:22:LL_TIM_DisableCounter	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:1789:26:LL_TIM_IsEnabledCounter	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:1800:22:LL_TIM_EnableUpdateEvent	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:1811:22:LL_TIM_DisableUpdateEvent	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:1843:22:LL_TIM_SetUpdateSource	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:1870:22:LL_TIM_SetOnePulseMode	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:1958:22:LL_TIM_DisableARRPreload	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:5005:22:LL_TIM_ClearFlag_UPDATE	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:5016:26:LL_TIM_IsActiveFlag_UPDATE	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:5477:22:LL_TIM_EnableIT_UPDATE	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:5488:22:LL_TIM_DisableIT_UPDATE	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:5499:26:LL_TIM_IsEnabledIT_UPDATE	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:6142:22:LL_TIM_GenerateEvent_UPDATE	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:39:13:SCM_HSI_CLK_ON	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:45:13:SCM_HSI_CLK_OFF	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:52:13:SCM_HSI_SwithSystemClock_Entry	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:57:13:SCM_HSI_SwithSystemClock_Exit	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:115:36:scm_getmaxfreq	0	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:131:23:scm_systemclockconfig	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:213:23:SwitchHsePre	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:258:23:SwitchHse16toHse32	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:290:23:SwitchHse32toHse16	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:312:23:SwitchPlltoHse32	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:332:23:ConfigStartPll	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:347:13:ConfigHwPll	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:392:13:SCM_HSE_TimerInit	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:430:16:scm_init	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:533:16:scm_setup	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:625:16:scm_pll_setconfig	12	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:648:16:scm_pll_fractional_update	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:674:16:scm_setsystemclock	16	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:772:13:scm_pllready	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:787:16:scm_setwaitstates	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:847:16:scm_hserdy_isr	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:913:16:scm_pllrdy_isr	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:951:16:scm_notifyradiostate	0	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:970:16:scm_standbyexit	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:989:19:isRadioActive	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:995:19:SCM_HSE_Get_SW_HSERDY	0	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:1005:16:SCM_HSE_Set_SW_HSERDY	0	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:1012:16:SCM_HSE_Clear_SW_HSERDY	0	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:1020:16:SCM_HSE_WaitUntilReady	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:1064:16:SCM_HSE_StartStabilizationTimer	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:1086:16:SCM_HSE_StopStabilizationTimer	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/scm.c:1102:16:SCM_HSE_SW_HSERDY_isr	8	static

@@ -1,0 +1,16 @@
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:1882:22:LL_ADC_SetCommonClock	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:2639:26:LL_ADC_REG_GetSequencerConfigurable	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:2703:22:LL_ADC_REG_SetSequencerLength	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4226:22:LL_ADC_Disable	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4245:26:LL_ADC_IsEnabled	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4256:26:LL_ADC_IsDisableOngoing	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4356:22:LL_ADC_REG_StopConversion	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4383:26:LL_ADC_REG_IsStopConversionOngoing	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_adc.c:196:13:LL_ADC_CommonDeInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_adc.c:228:13:LL_ADC_CommonInit	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_adc.c:265:6:LL_ADC_CommonStructInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_adc.c:289:13:LL_ADC_DeInit	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_adc.c:466:13:LL_ADC_Init	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_adc.c:508:6:LL_ADC_StructInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_adc.c:557:13:LL_ADC_REG_Init	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_adc.c:665:6:LL_ADC_REG_StructInit	16	static

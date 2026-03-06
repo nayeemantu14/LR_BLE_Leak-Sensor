@@ -1,0 +1,8 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/MemoryManager/advanced_memory_manager.c:177:22:AMM_Init	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/MemoryManager/advanced_memory_manager.c:347:22:AMM_DeInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/MemoryManager/advanced_memory_manager.c:381:22:AMM_Alloc	64	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/MemoryManager/advanced_memory_manager.c:558:22:AMM_Free	56	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/MemoryManager/advanced_memory_manager.c:664:6:AMM_BackgroundProcess	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/MemoryManager/advanced_memory_manager.c:683:6:pushPending	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/MemoryManager/advanced_memory_manager.c:692:6:passPendingToActive	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/MemoryManager/advanced_memory_manager.c:705:39:popActive	16	static

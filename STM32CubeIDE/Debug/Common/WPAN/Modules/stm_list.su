@@ -1,0 +1,12 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/stm_list.c:30:6:LST_init_head	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/stm_list.c:36:9:LST_is_empty	32	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/stm_list.c:56:6:LST_insert_head	32	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/stm_list.c:71:6:LST_insert_tail	32	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/stm_list.c:86:6:LST_remove_node	32	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/stm_list.c:99:6:LST_remove_head	32	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/stm_list.c:112:6:LST_remove_tail	32	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/stm_list.c:125:6:LST_insert_node_after	32	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/stm_list.c:140:6:LST_insert_node_before	32	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/stm_list.c:155:5:LST_get_size	40	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/stm_list.c:176:6:LST_get_next_node	32	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/stm_list.c:188:6:LST_get_prev_node	32	static,ignoring_inline_asm

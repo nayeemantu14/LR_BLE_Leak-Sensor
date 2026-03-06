@@ -1,0 +1,2 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/system_stm32wbaxx.c:173:6:SystemInit	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/system_stm32wbaxx.c:301:6:SystemCoreClockUpdate	40	static

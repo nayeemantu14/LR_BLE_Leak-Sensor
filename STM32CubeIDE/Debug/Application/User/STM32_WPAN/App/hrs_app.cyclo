@@ -1,0 +1,6 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/hrs_app.c:100:6:HRS_Notification	4
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/hrs_app.c:151:6:HRS_APP_EvtRx	3
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/hrs_app.c:188:6:HRS_APP_Init	4
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/hrs_app.c:248:13:HRS_Hrme_SendNotification	2
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/hrs_app.c:273:13:HRS_APP_Measurements_timCB	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/hrs_app.c:285:13:HRS_APP_Measurements	12

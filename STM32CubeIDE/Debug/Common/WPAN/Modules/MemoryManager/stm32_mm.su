@@ -1,0 +1,4 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/MemoryManager/stm32_mm.c:181:8:UTIL_MM_GetBuffer	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/MemoryManager/stm32_mm.c:338:6:UTIL_MM_ReleaseBuffer	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/MemoryManager/stm32_mm.c:409:6:UTIL_MM_Init	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/MemoryManager/stm32_mm.c:463:13:prvInsertBlockIntoFreeList	24	static

@@ -1,0 +1,7 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/adv_trace_usart_if.c:69:25:UART_Init	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/adv_trace_usart_if.c:81:25:UART_DeInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/adv_trace_usart_if.c:98:25:UART_StartRx	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/adv_trace_usart_if.c:115:25:UART_TransmitDMA	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/adv_trace_usart_if.c:158:13:UsartIf_TxCpltCallback	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/adv_trace_usart_if.c:167:13:UsartIf_RxCpltCallback	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/adv_trace_usart_if.c:179:18:get_IRQn_Type_from_DMA_HandleTypeDef	16	static

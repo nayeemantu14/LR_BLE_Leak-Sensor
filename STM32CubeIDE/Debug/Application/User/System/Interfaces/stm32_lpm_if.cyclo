@@ -1,0 +1,12 @@
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pwr.h:699:22:LL_PWR_EnableUltraLowPowerMode	1
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pwr.h:2072:26:LL_PWR_IsActiveFlag_SB	2
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_cortex.h:317:22:LL_LPM_EnableSleep	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:475:16:PWR_EnterOffMode	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:650:16:PWR_ExitOffMode	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:688:16:PWR_EnterStopMode	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:717:16:PWR_ExitStopMode	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:722:16:PWR_EnterSleepMode	2
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:744:16:PWR_ExitSleepMode	2
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:760:6:PWR_EnableSleepMode	2
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:770:6:PWR_DisableSleepMode	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:777:10:is_boot_from_standby	3

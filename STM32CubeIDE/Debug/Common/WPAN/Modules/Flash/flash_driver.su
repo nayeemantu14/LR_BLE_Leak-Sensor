@@ -1,0 +1,3 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/Flash/flash_driver.c:47:6:FD_SetStatus	32	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/Flash/flash_driver.c:78:21:FD_WriteData	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/Flash/flash_driver.c:108:21:FD_EraseSectors	40	static

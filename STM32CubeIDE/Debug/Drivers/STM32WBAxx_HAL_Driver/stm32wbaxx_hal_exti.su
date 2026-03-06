@@ -1,0 +1,11 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_exti.c:139:19:HAL_EXTI_SetConfigLine	40	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_exti.c:265:19:HAL_EXTI_GetConfigLine	40	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_exti.c:368:19:HAL_EXTI_ClearConfigLine	40	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_exti.c:438:19:HAL_EXTI_RegisterCallback	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_exti.c:473:19:HAL_EXTI_GetHandle	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_exti.c:513:6:HAL_EXTI_IRQHandler	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_exti.c:567:10:HAL_EXTI_GetPending	40	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_exti.c:611:6:HAL_EXTI_ClearPending	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_exti.c:647:6:HAL_EXTI_GenerateSWI	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_exti.c:699:6:HAL_EXTI_ConfigLineAttributes	40	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_exti.c:772:19:HAL_EXTI_GetConfigLineAttributes	40	static

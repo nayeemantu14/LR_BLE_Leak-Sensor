@@ -1,0 +1,37 @@
+../../Drivers/CMSIS/Include/core_cm33.h:2359:22:__NVIC_SetPriorityGrouping	1
+../../Drivers/CMSIS/Include/core_cm33.h:2378:26:__NVIC_GetPriorityGrouping	1
+../../Drivers/CMSIS/Include/core_cm33.h:2390:22:__NVIC_EnableIRQ	2
+../../Drivers/CMSIS/Include/core_cm33.h:2428:22:__NVIC_DisableIRQ	2
+../../Drivers/CMSIS/Include/core_cm33.h:2447:26:__NVIC_GetPendingIRQ	2
+../../Drivers/CMSIS/Include/core_cm33.h:2466:22:__NVIC_SetPendingIRQ	2
+../../Drivers/CMSIS/Include/core_cm33.h:2481:22:__NVIC_ClearPendingIRQ	2
+../../Drivers/CMSIS/Include/core_cm33.h:2498:26:__NVIC_GetActive	2
+../../Drivers/CMSIS/Include/core_cm33.h:2587:22:__NVIC_SetPriority	2
+../../Drivers/CMSIS/Include/core_cm33.h:2609:26:__NVIC_GetPriority	2
+../../Drivers/CMSIS/Include/core_cm33.h:2634:26:NVIC_EncodePriority	2
+../../Drivers/CMSIS/Include/core_cm33.h:2661:22:NVIC_DecodePriority	2
+../../Drivers/CMSIS/Include/core_cm33.h:2711:34:__NVIC_SystemReset	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:180:6:HAL_NVIC_SetPriorityGrouping	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:202:6:HAL_NVIC_SetPriority	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:224:6:HAL_NVIC_EnableIRQ	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:240:6:HAL_NVIC_DisableIRQ	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:253:6:HAL_NVIC_SystemReset	0
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:266:10:HAL_SYSTICK_Config	2
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:310:10:HAL_NVIC_GetPriorityGrouping	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:337:6:HAL_NVIC_GetPriority	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:352:6:HAL_NVIC_SetPendingIRQ	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:367:10:HAL_NVIC_GetPendingIRQ	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:380:6:HAL_NVIC_ClearPendingIRQ	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:394:10:HAL_NVIC_GetActive	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:413:6:HAL_SYSTICK_CLKSourceConfig	5
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:462:10:HAL_SYSTICK_GetCLKSourceConfig	4
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:503:6:HAL_SYSTICK_IRQHandler	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:512:13:HAL_SYSTICK_Callback	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:530:6:HAL_MPU_Enable	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:550:6:HAL_MPU_EnableRegion	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:610:6:HAL_MPU_Disable	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:630:6:HAL_MPU_DisableRegion	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:682:6:HAL_MPU_ConfigRegion	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:700:13:MPU_ConfigRegion	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:734:6:HAL_MPU_ConfigMemoryAttributes	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_cortex.c:752:13:MPU_ConfigMemoryAttributes	2

@@ -1,0 +1,4 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Config/Debug_GPIO/app_debug.c:795:6:APP_DEBUG_SIGNAL_SET	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Config/Debug_GPIO/app_debug.c:801:6:APP_DEBUG_SIGNAL_RESET	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Config/Debug_GPIO/app_debug.c:808:6:APP_DEBUG_SIGNAL_TOGGLE	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Config/Debug_GPIO/app_debug.c:823:6:RT_DEBUG_GPIO_Init	1

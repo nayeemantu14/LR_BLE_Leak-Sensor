@@ -1,0 +1,4 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_rng_ex.c:85:19:HAL_RNGEx_SetConfig	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_rng_ex.c:185:19:HAL_RNGEx_GetConfig	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_rng_ex.c:240:19:HAL_RNGEx_LockConfig	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_rng_ex.c:299:19:HAL_RNGEx_RecoverSeedError	24	static

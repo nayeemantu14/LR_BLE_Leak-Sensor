@@ -1,0 +1,7 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/crc_ctrl.c:69:29:CRCCTRL_Init	2
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/crc_ctrl.c:91:29:CRCCTRL_RegisterHandle	4
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/crc_ctrl.c:127:29:CRCCTRL_Calculate	10
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/crc_ctrl.c:185:29:CRCCTRL_Accumulate	10
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/crc_ctrl.c:252:19:CrcConfigure	4
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/crc_ctrl.c:299:29:CRCCTRL_MutexTake	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/crc_ctrl.c:304:29:CRCCTRL_MutexRelease	1

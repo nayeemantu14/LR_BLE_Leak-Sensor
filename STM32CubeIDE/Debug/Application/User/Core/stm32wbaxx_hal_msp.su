@@ -1,0 +1,11 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_hal_msp.c:66:6:HAL_MspInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_hal_msp.c:96:6:HAL_ADC_MspInit	96	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_hal_msp.c:130:6:HAL_ADC_MspDeInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_hal_msp.c:152:6:HAL_CRC_MspInit	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_hal_msp.c:175:6:HAL_CRC_MspDeInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_hal_msp.c:197:6:HAL_RAMCFG_MspInit	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_hal_msp.c:216:6:HAL_RAMCFG_MspDeInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_hal_msp.c:235:6:HAL_RTC_MspInit	96	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_hal_msp.c:272:6:HAL_RTC_MspDeInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_hal_msp.c:297:6:HAL_UART_MspInit	120	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_hal_msp.c:411:6:HAL_UART_MspDeInit	16	static

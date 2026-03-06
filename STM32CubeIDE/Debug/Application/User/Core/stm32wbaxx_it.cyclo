@@ -1,0 +1,26 @@
+../../Drivers/CMSIS/Include/core_cm33.h:2390:22:__NVIC_EnableIRQ	2
+../../Drivers/CMSIS/Include/core_cm33.h:2428:22:__NVIC_DisableIRQ	2
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:1773:22:LL_RCC_RADIO_DisableSleepTimerClock	1
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pka.h:504:26:LL_PKA_IsActiveFlag_PROCEND	2
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pka.h:559:22:LL_PKA_ClearFlag_PROCEND	1
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:5005:22:LL_TIM_ClearFlag_UPDATE	1
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:5016:26:LL_TIM_IsActiveFlag_UPDATE	2
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:84:6:NMI_Handler	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:100:6:HardFault_Handler	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:116:6:MemManage_Handler	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:132:6:BusFault_Handler	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:148:6:UsageFault_Handler	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:164:6:SVC_Handler	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:177:6:DebugMon_Handler	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:190:6:PendSV_Handler	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:203:6:SysTick_Handler	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:224:6:RTC_IRQHandler	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:239:6:RCC_IRQHandler	3
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:269:6:GPDMA1_Channel0_IRQHandler	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:283:6:GPDMA1_Channel1_IRQHandler	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:297:6:USART1_IRQHandler	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:311:6:TIM16_IRQHandler	2
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:337:6:PKA_IRQHandler	2
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:358:6:RADIO_IRQHandler	2
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:380:6:WKUP_IRQHandler	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:394:6:HASH_IRQHandler	3

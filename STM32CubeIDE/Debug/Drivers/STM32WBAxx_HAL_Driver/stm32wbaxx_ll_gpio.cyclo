@@ -1,0 +1,11 @@
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_gpio.h:284:22:LL_GPIO_SetPinMode	3
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_gpio.h:354:22:LL_GPIO_SetPinOutputType	1
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_gpio.h:424:22:LL_GPIO_SetPinSpeed	3
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_gpio.h:494:22:LL_GPIO_SetPinPull	3
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_gpio.h:567:22:LL_GPIO_SetAFPin_0_7	3
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_gpio.h:644:22:LL_GPIO_SetAFPin_8_15	3
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:787:22:LL_AHB2_GRP1_ForceReset	1
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:845:22:LL_AHB2_GRP1_ReleaseReset	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_gpio.c:107:13:LL_GPIO_DeInit	5
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_gpio.c:173:13:LL_GPIO_Init	8
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_gpio.c:246:6:LL_GPIO_StructInit	1

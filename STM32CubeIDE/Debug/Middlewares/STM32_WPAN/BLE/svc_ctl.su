@@ -1,0 +1,5 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c:65:6:SVCCTL_Init	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c:83:6:SVCCTL_RegisterSvcHandler	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c:100:6:SVCCTL_RegisterCltHandler	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c:117:6:SVCCTL_RegisterHandler	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/ble/svc/Src/svc_ctl.c:129:28:SVCCTL_UserEvtRx	32	static

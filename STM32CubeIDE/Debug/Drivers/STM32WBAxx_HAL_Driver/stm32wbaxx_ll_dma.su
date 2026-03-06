@@ -1,0 +1,27 @@
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:1242:22:LL_DMA_ResetChannel	24	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:1264:22:LL_DMA_SuspendChannel	24	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:1333:22:LL_DMA_SetLinkedListBaseAddr	32	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:1386:22:LL_DMA_ConfigControl	32	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:1588:22:LL_DMA_ConfigTransfer	32	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:1622:22:LL_DMA_ConfigBurstLength	32	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:2424:22:LL_DMA_ConfigChannelTransfer	32	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:2460:22:LL_DMA_SetTransferEventMode	32	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:2565:22:LL_DMA_SetTriggerMode	32	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:2833:22:LL_DMA_SetPeriphRequest	32	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:3039:22:LL_DMA_SetHWTrigger	32	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:3145:22:LL_DMA_SetBlkDataLength	32	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:3194:22:LL_DMA_ConfigAddresses	32	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:3751:22:LL_DMA_SetLinkedListAddrOffset	32	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:3911:22:LL_DMA_DisableChannelPrivilege	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:418:22:LL_AHB1_GRP1_ReleaseReset	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:787:22:LL_AHB2_GRP1_ForceReset	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_dma.c:292:10:LL_DMA_DeInit	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_dma.c:393:10:LL_DMA_Init	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_dma.c:570:6:LL_DMA_StructInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_dma.c:610:6:LL_DMA_ListStructInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_dma.c:642:10:LL_DMA_List_DeInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_dma.c:671:10:LL_DMA_List_Init	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_dma.c:719:6:LL_DMA_NodeStructInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_dma.c:775:10:LL_DMA_CreateLinkNode	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_dma.c:1005:6:LL_DMA_ConnectLinkNode	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_dma.c:1020:6:LL_DMA_DisconnectNextLinkNode	16	static

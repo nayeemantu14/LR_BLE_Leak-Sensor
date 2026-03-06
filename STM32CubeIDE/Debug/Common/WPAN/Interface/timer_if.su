@@ -1,0 +1,22 @@
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rtc.h:1774:26:LL_RTC_TIME_GetSubSecond	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:137:21:TIMER_IF_Init	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:163:21:TIMER_IF_StartTimer	72	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:191:21:TIMER_IF_StopTimer	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:204:10:TIMER_IF_SetTimerContext	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:215:10:TIMER_IF_GetTimerContext	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:223:10:TIMER_IF_GetTimerElapsedTime	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:228:10:TIMER_IF_GetTimerValue	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:240:10:TIMER_IF_GetMinimumTimeout	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:245:10:TIMER_IF_Convert_ms2Tick	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:250:10:TIMER_IF_Convert_Tick2ms	40	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:255:6:TIMER_IF_DelayMs	24	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:267:6:HAL_RTC_AlarmAEventCallback	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:272:6:HAL_RTCEx_SSRUEventCallback	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:282:10:TIMER_IF_GetTime	80	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:299:6:TIMER_IF_BkUp_Write_Seconds	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:304:6:TIMER_IF_BkUp_Write_SubSeconds	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:309:10:TIMER_IF_BkUp_Read_Seconds	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:314:10:TIMER_IF_BkUp_Read_SubSeconds	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:319:13:TIMER_IF_BkUp_Write_MSBticks	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:324:17:TIMER_IF_BkUp_Read_MSBticks	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/timer_if.c:331:24:GetTimerTicks	16	static

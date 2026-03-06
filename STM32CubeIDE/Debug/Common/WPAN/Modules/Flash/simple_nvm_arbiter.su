@@ -1,0 +1,12 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter.c:228:20:SNVMA_Init	72	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter.c:421:20:SNVMA_Register	56	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter.c:532:20:SNVMA_Restore	48	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter.c:655:20:SNVMA_Write	56	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter.c:768:6:SNVMA_FlashManagerCallback	368	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter.c:1472:9:IsHeaderOk	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter.c:1527:9:IsCrcOk	40	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter.c:1687:9:IsSameContent	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter.c:1705:19:GetNewestBank	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter.c:1727:9:EraseSector	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter.c:1765:17:StartFlashWrite	48	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter.c:1869:6:InvokeBufferCallback	48	static,ignoring_inline_asm

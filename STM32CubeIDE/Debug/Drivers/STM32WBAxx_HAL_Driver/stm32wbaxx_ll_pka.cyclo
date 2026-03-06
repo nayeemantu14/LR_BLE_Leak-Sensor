@@ -1,0 +1,6 @@
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pka.h:203:22:LL_PKA_Config	1
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:787:22:LL_AHB2_GRP1_ForceReset	1
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:845:22:LL_AHB2_GRP1_ReleaseReset	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_pka.c:90:13:LL_PKA_DeInit	2
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_pka.c:122:13:LL_PKA_Init	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_ll_pka.c:139:6:LL_PKA_StructInit	1

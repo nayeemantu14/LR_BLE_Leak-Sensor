@@ -1,0 +1,4 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/link_layer/ll_sys/src/ll_sys_startup.c:38:13:ll_sys_event_missed_cb	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/link_layer/ll_sys/src/ll_sys_startup.c:48:6:ll_sys_ble_cntrl_init	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/link_layer/ll_sys/src/ll_sys_startup.c:84:6:ll_sys_thread_init	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/link_layer/ll_sys/src/ll_sys_startup.c:96:13:ll_sys_dependencies_init	2

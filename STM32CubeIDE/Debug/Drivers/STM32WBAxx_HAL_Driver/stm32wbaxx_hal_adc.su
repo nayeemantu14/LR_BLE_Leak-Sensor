@@ -1,0 +1,60 @@
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:1947:22:LL_ADC_SetCommonPathInternalCh	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:2035:26:LL_ADC_GetCommonPathInternalCh	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:2413:22:LL_ADC_SetSamplingTimeCommonChannels	24	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:2547:26:LL_ADC_REG_IsTriggerSourceSWStart	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:2922:22:LL_ADC_REG_SetSequencerRanks	24	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:3147:22:LL_ADC_REG_SetSequencerChAdd	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:3222:22:LL_ADC_REG_SetSequencerChRem	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:3420:26:LL_ADC_REG_GetDMATransfer	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:3538:22:LL_ADC_SetChannelSamplingTime	24	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:3665:22:LL_ADC_SetAnalogWDMonitChannels	32	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:3838:22:LL_ADC_ConfigAnalogWDThresholds	32	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4155:22:LL_ADC_EnableInternalRegulator	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4174:22:LL_ADC_DisableInternalRegulator	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4185:26:LL_ADC_IsInternalRegulatorEnabled	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4206:22:LL_ADC_Enable	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4226:22:LL_ADC_Disable	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4245:26:LL_ADC_IsEnabled	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4256:26:LL_ADC_IsDisableOngoing	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4336:22:LL_ADC_REG_StartConversion	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4356:22:LL_ADC_REG_StopConversion	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4372:26:LL_ADC_REG_IsConversionOngoing	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4489:26:LL_ADC_IsActiveFlag_LDORDY	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4602:22:LL_ADC_ClearFlag_LDORDY	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4657:22:LL_ADC_ClearFlag_AWD1	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4668:22:LL_ADC_ClearFlag_AWD2	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4679:22:LL_ADC_ClearFlag_AWD3	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4775:22:LL_ADC_EnableIT_AWD1	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4786:22:LL_ADC_EnableIT_AWD2	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4797:22:LL_ADC_EnableIT_AWD3	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4885:22:LL_ADC_DisableIT_AWD1	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4896:22:LL_ADC_DisableIT_AWD2	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_adc.h:4907:22:LL_ADC_DisableIT_AWD3	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:379:19:HAL_ADC_Init	40	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:760:19:HAL_ADC_DeInit	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:885:13:HAL_ADC_MspInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:902:13:HAL_ADC_MspDeInit	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:1169:19:HAL_ADC_Start	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:1236:19:HAL_ADC_Stop	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:1287:19:HAL_ADC_PollForConversion	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:1420:19:HAL_ADC_PollForEvent	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:1550:19:HAL_ADC_Start_IT	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:1641:19:HAL_ADC_Stop_IT	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:1688:19:HAL_ADC_Start_DMA	120	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:1846:19:HAL_ADC_Stop_DMA	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:1927:10:HAL_ADC_GetValue	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:1944:6:HAL_ADC_IRQHandler	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:2154:13:HAL_ADC_ConvCpltCallback	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:2169:13:HAL_ADC_ConvHalfCpltCallback	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:2184:13:HAL_ADC_LevelOutOfWindowCallback	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:2206:13:HAL_ADC_ErrorCallback	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:2252:19:HAL_ADC_ConfigChannel	40	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:2449:19:HAL_ADC_AnalogWDGConfig	56	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:2668:10:HAL_ADC_GetState	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:2682:10:HAL_ADC_GetError	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:2709:19:ADC_ConversionStop	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:2763:19:ADC_Enable	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:2856:19:ADC_Disable	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:2918:13:ADC_DMAConvCplt	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:2996:13:ADC_DMAHalfConvCplt	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Drivers/STM32WBAxx_HAL_Driver/Src/stm32wbaxx_hal_adc.c:3014:13:ADC_DMAError	24	static

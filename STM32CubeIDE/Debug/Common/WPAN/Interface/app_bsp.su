@@ -1,0 +1,17 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:331:6:APP_BSP_Init	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:372:6:APP_BSP_PostIdle	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:413:6:APP_BSP_StandbyExit	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:499:9:APP_BSP_ButtonIsLongPressed	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:517:6:APP_BSP_SetButtonIsLongPressed	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:527:13:APP_BSP_Button1Action	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:536:13:APP_BSP_Button2Action	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:545:13:APP_BSP_Button3Action	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:656:6:APP_BSP_LedInit	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:1580:13:Button_InitTask	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:1608:6:APP_BSP_ButtonInit	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:1698:13:Button_LaunchActionTask	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:1773:13:Button_TriggerActions	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:1800:6:BSP_PB_Callback	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:1806:6:HAL_PWR_WKUP2_Callback	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:1823:6:HAL_PWR_WKUP3_Callback	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/app_bsp.c:1875:9:APP_BSP_SerialCmdExecute	24	static

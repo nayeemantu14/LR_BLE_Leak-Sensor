@@ -1,0 +1,40 @@
+../../Drivers/CMSIS/Include/core_cm33.h:2587:22:__NVIC_SetPriority	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:604:22:LL_AHB2_GRP1_EnableClock	24	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:730:22:LL_AHB2_GRP1_DisableClock	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pka.h:203:22:LL_PKA_Config	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pka.h:214:22:LL_PKA_Enable	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pka.h:225:22:LL_PKA_Disable	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pka.h:312:22:LL_PKA_Start	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pka.h:364:22:LL_PKA_EnableIT_PROCEND	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pka.h:397:22:LL_PKA_DisableIT_PROCEND	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pka.h:452:26:LL_PKA_IsEnabledIT_PROCEND	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pka.h:504:26:LL_PKA_IsActiveFlag_PROCEND	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pka.h:559:22:LL_PKA_ClearFlag_PROCEND	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:161:6:PKACTRL_Reset	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:175:5:PKACTRL_StartP256Key	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:200:5:PKACTRL_ReadP256Key	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:219:5:PKACTRL_StartDhKey	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:247:5:PKACTRL_ReadDhKey	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:263:6:PKACTRL_BG_Process	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:276:6:PKACTRL_EndOfProcessCb	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:287:12:PKACTRL_Process	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:375:12:PKA_Enable	24	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:431:13:PKA_Disable	24	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:463:13:PKA_WriteSingleInput	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:469:13:PKA_WriteOperand	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:484:13:PKA_Start	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:498:12:PKA_EndOfOperation	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:513:17:PKA_ReadSingleOutput	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:519:13:PKA_ReadResult	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:530:13:PKA_P256_StartRangeCheck	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:545:17:PKA_P256_IsRangeCheckOk	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:550:13:PKA_P256_StartPointCheck	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:582:17:PKA_P256_IsPointCheckOk	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:587:13:PKA_P256_StartEccScalarMul	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:628:13:PKA_P256_ReadEccScalarMul	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:645:12:PKACTRL_MutexTake	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:650:12:PKACTRL_MutexRelease	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:655:12:PKACTRL_TakeSemEndOfOperation	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:660:12:PKACTRL_ReleaseSemEndOfOperation	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:665:13:PKACTRL_CB_Complete	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Modules/pka_ctrl.c:669:13:PKACTRL_CB_Process	4	static

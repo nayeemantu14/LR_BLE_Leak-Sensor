@@ -1,0 +1,13 @@
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:604:22:LL_AHB2_GRP1_EnableClock	24	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:669:26:LL_AHB2_GRP1_IsEnabledClock	16	static
+../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:730:22:LL_AHB2_GRP1_DisableClock	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/hw_aes.c:52:12:CRYP_MutexTake	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/hw_aes.c:57:12:CRYP_MutexRelease	4	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/hw_aes.c:64:5:HW_AES_Enable	24	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/hw_aes.c:97:6:HW_AES_SetKey	48	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/hw_aes.c:162:6:HW_AES_Crypt	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/hw_aes.c:186:6:HW_AES_Disable	24	static,ignoring_inline_asm
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/hw_aes.c:213:6:HW_AES_Crypt8	64	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/hw_aes.c:245:6:HW_AES_InitCcm	64	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/hw_aes.c:302:6:HW_AES_EndCcm	32	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Projects/Common/WPAN/Interfaces/hw_aes.c:327:6:HW_AES_SetLast	16	static

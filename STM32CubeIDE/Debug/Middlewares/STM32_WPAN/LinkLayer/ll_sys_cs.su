@@ -1,0 +1,6 @@
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/link_layer/ll_sys/src/ll_sys_cs.c:28:6:ll_sys_enable_irq	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/link_layer/ll_sys/src/ll_sys_cs.c:37:6:ll_sys_disable_irq	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/link_layer/ll_sys/src/ll_sys_cs.c:47:6:ll_sys_enable_specific_irq	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/link_layer/ll_sys/src/ll_sys_cs.c:57:6:ll_sys_disable_specific_irq	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/link_layer/ll_sys/src/ll_sys_cs.c:62:6:ll_sys_phy_start_clbr	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Middlewares/ST/STM32_WPAN/link_layer/ll_sys/src/ll_sys_cs.c:67:6:ll_sys_phy_stop_clbr	8	static
