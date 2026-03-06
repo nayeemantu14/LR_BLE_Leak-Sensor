@@ -28,7 +28,7 @@
 /* USER CODE BEGIN Includes */
 #include "app_bsp.h"
 #include "pka_ctrl.h"
-
+#include "app_leak_detection.h"
 /* USER CODE END Includes */
 
 /* External functions --------------------------------------------------------*/
@@ -447,5 +447,27 @@ void HASH_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
+void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin)
+{
+  if (GPIO_Pin == MSense_Pin)
+  {
+    APP_LEAK_EXTI_Callback();
+  }
+  if (GPIO_Pin == LR_BUT_Pin)
+  {
+    APP_LEAK_LR_Callback();
+  }
+}
 
+void HAL_GPIO_EXTI_Rising_Callback(uint16_t GPIO_Pin)
+{
+  if (GPIO_Pin == MSense_Pin)
+  {
+    APP_LEAK_EXTI_Callback();
+  }
+  if (GPIO_Pin == LR_BUT_Pin)
+  {
+    APP_LEAK_LR_Callback();
+  }
+}
 /* USER CODE END 1 */

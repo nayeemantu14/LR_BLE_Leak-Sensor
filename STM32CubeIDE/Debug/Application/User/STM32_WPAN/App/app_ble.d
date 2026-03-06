@@ -128,7 +128,9 @@ Application/User/STM32_WPAN/App/app_ble.o: \
  ../../Projects/Common/WPAN/Interfaces/app_bsp.h \
  ../../Drivers/BSP/B-WBA5M-WPAN/b_wba5m_wpan.h \
  ../../Core/Inc/b_wba5m_wpan_conf.h \
- ../../Drivers/BSP/B-WBA5M-WPAN/b_wba5m_wpan_errno.h
+ ../../Drivers/BSP/B-WBA5M-WPAN/b_wba5m_wpan_errno.h \
+ C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.h \
+ C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_alert.h
 ../../Core/Inc/main.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal.h:
 ../../Core/Inc/stm32wbaxx_hal_conf.h:
@@ -263,3 +265,5 @@ C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/A
 ../../Drivers/BSP/B-WBA5M-WPAN/b_wba5m_wpan.h:
 ../../Core/Inc/b_wba5m_wpan_conf.h:
 ../../Drivers/BSP/B-WBA5M-WPAN/b_wba5m_wpan_errno.h:
+C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.h:
+C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_alert.h:

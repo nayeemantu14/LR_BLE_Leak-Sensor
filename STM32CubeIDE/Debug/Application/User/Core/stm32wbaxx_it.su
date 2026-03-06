@@ -26,3 +26,5 @@ C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:386:6:RADIO_IRQHandler	8	static,ignoring_inline_asm
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:408:6:WKUP_IRQHandler	8	static
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:422:6:HASH_IRQHandler	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:450:6:HAL_GPIO_EXTI_Falling_Callback	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/stm32wbaxx_it.c:462:6:HAL_GPIO_EXTI_Rising_Callback	16	static

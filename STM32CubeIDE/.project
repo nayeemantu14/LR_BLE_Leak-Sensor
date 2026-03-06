@@ -384,6 +384,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/STM32_WPAN/App/app_ble.c</locationURI>
 		</link>
 		<link>
+			<name>Application/User/STM32_WPAN/App/app_leak_detection.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/STM32_WPAN/App/app_leak_detection.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/STM32_WPAN/App/app_alert.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/STM32_WPAN/App/app_alert.c</locationURI>
+		</link>
+		<link>
 			<name>Application/User/STM32_WPAN/App/dis.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/STM32_WPAN/App/dis.c</locationURI>
