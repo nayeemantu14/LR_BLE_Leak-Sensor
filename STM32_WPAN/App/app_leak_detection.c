@@ -40,16 +40,26 @@ void APP_LEAK_Init(void)
 
   /* Read LR_BUT pin to select PHY: GND = Coded PHY (Long Range), HIGH = 1M PHY */
   uint8_t lr_mode = (HAL_GPIO_ReadPin(LR_BUT_GPIO_Port, LR_BUT_Pin) == GPIO_PIN_RESET) ? 1 : 0;
-  uint8_t adv_mode      = lr_mode ? 0x02 : 0x00;  /* 0x02 = Coded, 0x00 = 1M */
-  uint8_t secondary_phy = lr_mode ? 0x03 : 0x01;  /* 0x03 = Coded, 0x01 = 1M */
 
-  LOG_INFO_APP(">> LEAK: PHY = %s\n", lr_mode ? "Coded (Long Range)" : "1M (Standard)");
+  /*
+   * 1M mode:    Legacy advertising on primary channels only (phones can see it)
+   *             ADV_SCAN_IND = non-connectable, scannable
+   * Coded mode: Extended advertising on secondary channels (long range)
+   *             Non-connectable extended advertising with Coded PHY S=8
+   */
+  uint8_t adv_mode       = lr_mode ? 0x02 : 0x00;
+  uint8_t secondary_phy  = lr_mode ? 0x03 : 0x01;
+  uint16_t adv_properties = lr_mode
+    ? 0                                                                 /* Extended: non-connectable, non-scannable */
+    : (HCI_ADV_EVENT_PROP_LEGACY | HCI_ADV_EVENT_PROP_SCANNABLE);      /* Legacy ADV_SCAN_IND: primary channels only */
 
-  /* Configure extended advertising with selected PHY */
+  LOG_INFO_APP(">> LEAK: PHY = %s\n", lr_mode ? "Coded (Long Range)" : "1M (Legacy)");
+
+  /* Configure advertising with selected PHY and mode */
   status = aci_gap_adv_set_configuration(
     adv_mode,                           /* Adv_Mode: Coded or 1M primary PHY */
     0,                                  /* Advertising_Handle */
-    HCI_ADV_EVENT_PROP_CONNECTABLE,     /* Connectable extended advertising */
+    adv_properties,                     /* Legacy (1M) or Extended (Coded) */
     500, 700,                           /* Interval: 312.5 - 437.5 ms */
     ADV_CH_37 | ADV_CH_38 | ADV_CH_39, /* All channels */
     GAP_PUBLIC_ADDR,                    /* Own_Address_Type */
