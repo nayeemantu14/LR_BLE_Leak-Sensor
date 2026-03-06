@@ -174,3 +174,10 @@ static void LR_Switch_Task(void)
   LOG_INFO_APP(">> LEAK: LR switch changed — resetting MCU\n");
   NVIC_SystemReset();
 }
+
+void APP_LEAK_Update_Battery(uint8_t batt_pct)
+{
+  a_EleakAdvData[19] = batt_pct;
+  aci_gap_adv_set_adv_data(0, HCI_SET_ADV_DATA_OPERATION_COMPLETE, 0,
+                           sizeof(a_EleakAdvData), a_EleakAdvData);
+}

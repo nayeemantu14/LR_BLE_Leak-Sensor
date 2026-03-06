@@ -5,6 +5,7 @@
 "./Application/User/Core/syscalls.o"
 "./Application/User/Core/sysmem.o"
 "./Application/User/STM32_WPAN/App/app_alert.o"
+"./Application/User/STM32_WPAN/App/app_battery.o"
 "./Application/User/STM32_WPAN/App/app_ble.o"
 "./Application/User/STM32_WPAN/App/app_leak_detection.o"
 "./Application/User/STM32_WPAN/App/dis.o"

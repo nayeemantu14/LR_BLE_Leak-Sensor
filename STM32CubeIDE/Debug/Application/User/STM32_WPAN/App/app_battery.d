@@ -1,5 +1,6 @@
-Application/User/STM32_WPAN/App/app_ble.o: \
- C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_ble.c \
+Application/User/STM32_WPAN/App/app_battery.o: \
+ C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_battery.c \
+ C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_battery.h \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal.h \
  ../../Core/Inc/stm32wbaxx_hal_conf.h \
@@ -78,60 +79,15 @@ Application/User/STM32_WPAN/App/app_ble.o: \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_icache.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h \
- ../../Core/Inc/app_common.h \
+ ../../Core/Inc/app_common.h ../../Utilities/tim_serv/stm32_timer.h \
+ ../../Utilities/sequencer/stm32_seq.h \
  ../../Projects/Common/WPAN/Modules/Log/log_module.h \
  ../../System/Config/Log/log_module_conf.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/ble_core.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/ble_std.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/ble_defs.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_vs_codes.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_gen_aci.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_types.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/ble_const.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_gap_aci.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_gatt_aci.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_l2cap_aci.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_hal_aci.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_hci_le.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_events.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/ble_bufsize.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/ble_legacy.h \
- ../../Middlewares/ST/STM32_WPAN/ble/svc/Inc/uuid.h \
- ../../Middlewares/ST/STM32_WPAN/ble/svc/Inc/svc_ctl.h \
- ../../Projects/Common/WPAN/Modules/BasicAES/baes.h \
- ../../Projects/Common/WPAN/Modules/pka_ctrl.h \
+ ../../Projects/Common/WPAN/Modules/adc_ctrl.h \
  ../../Projects/Common/WPAN/Modules/utilities_common.h \
- ../../System/Modules/ble_timer.h \
- C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_ble.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_types.h \
- ../../STM32_WPAN/Target/host_stack_if.h \
- ../../STM32_WPAN/Target/ll_sys_if.h ../../Core/Inc/stm32_rtos.h \
- ../../Utilities/sequencer/stm32_seq.h \
- ../../Projects/Common/WPAN/Modules/otp.h \
- ../../Utilities/tim_serv/stm32_timer.h \
- ../../Projects/Common/WPAN/Modules/stm_list.h \
- ../../Middlewares/ST/STM32_WPAN/stm32_wpan_common.h \
- ../../Projects/Common/WPAN/Modules/MemoryManager/advanced_memory_manager.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/blestack.h \
- ../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_types.h \
- ../../Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter.h \
- ../../Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter_common.h \
- ../../Projects/Common/WPAN/Modules/utilities_common.h \
- ../../System/Config/Flash/simple_nvm_arbiter_conf.h \
- ../../Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter_common.h \
- C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/hrs.h \
- C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/hrs_app.h \
- C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/dis.h \
- C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/dis_app.h \
- C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/p2p_server.h \
- C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/p2p_server_app.h \
- ../../Projects/Common/WPAN/Interfaces/app_bsp.h \
- ../../Drivers/BSP/B-WBA5M-WPAN/b_wba5m_wpan.h \
- ../../Core/Inc/b_wba5m_wpan_conf.h \
- ../../Drivers/BSP/B-WBA5M-WPAN/b_wba5m_wpan_errno.h \
  C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.h \
- C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_alert.h \
- C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_battery.h
+ C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_alert.h
+C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_battery.h:
 ../../Core/Inc/main.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal.h:
 ../../Core/Inc/stm32wbaxx_hal_conf.h:
@@ -215,57 +171,11 @@ Application/User/STM32_WPAN/App/app_ble.o: \
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_tim.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h:
 ../../Core/Inc/app_common.h:
+../../Utilities/tim_serv/stm32_timer.h:
+../../Utilities/sequencer/stm32_seq.h:
 ../../Projects/Common/WPAN/Modules/Log/log_module.h:
 ../../System/Config/Log/log_module_conf.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/ble_core.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/ble_std.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/ble_defs.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_vs_codes.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_gen_aci.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_types.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/ble_const.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_gap_aci.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_gatt_aci.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_l2cap_aci.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_hal_aci.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_hci_le.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_events.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/ble_bufsize.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/ble_legacy.h:
-../../Middlewares/ST/STM32_WPAN/ble/svc/Inc/uuid.h:
-../../Middlewares/ST/STM32_WPAN/ble/svc/Inc/svc_ctl.h:
-../../Projects/Common/WPAN/Modules/BasicAES/baes.h:
-../../Projects/Common/WPAN/Modules/pka_ctrl.h:
+../../Projects/Common/WPAN/Modules/adc_ctrl.h:
 ../../Projects/Common/WPAN/Modules/utilities_common.h:
-../../System/Modules/ble_timer.h:
-C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_ble.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_types.h:
-../../STM32_WPAN/Target/host_stack_if.h:
-../../STM32_WPAN/Target/ll_sys_if.h:
-../../Core/Inc/stm32_rtos.h:
-../../Utilities/sequencer/stm32_seq.h:
-../../Projects/Common/WPAN/Modules/otp.h:
-../../Utilities/tim_serv/stm32_timer.h:
-../../Projects/Common/WPAN/Modules/stm_list.h:
-../../Middlewares/ST/STM32_WPAN/stm32_wpan_common.h:
-../../Projects/Common/WPAN/Modules/MemoryManager/advanced_memory_manager.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/blestack.h:
-../../Middlewares/ST/STM32_WPAN/ble/stack/include/auto/ble_types.h:
-../../Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter.h:
-../../Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter_common.h:
-../../Projects/Common/WPAN/Modules/utilities_common.h:
-../../System/Config/Flash/simple_nvm_arbiter_conf.h:
-../../Projects/Common/WPAN/Modules/Flash/simple_nvm_arbiter_common.h:
-C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/hrs.h:
-C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/hrs_app.h:
-C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/dis.h:
-C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/dis_app.h:
-C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/p2p_server.h:
-C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/p2p_server_app.h:
-../../Projects/Common/WPAN/Interfaces/app_bsp.h:
-../../Drivers/BSP/B-WBA5M-WPAN/b_wba5m_wpan.h:
-../../Core/Inc/b_wba5m_wpan_conf.h:
-../../Drivers/BSP/B-WBA5M-WPAN/b_wba5m_wpan_errno.h:
 C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.h:
 C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_alert.h:
-C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_battery.h:

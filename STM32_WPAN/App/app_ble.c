@@ -49,6 +49,7 @@
 #include "app_bsp.h"
 #include "app_leak_detection.h"
 #include "app_alert.h"
+#include "app_battery.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -319,6 +320,7 @@ void APP_BLE_Init(void)
 
     /* Initialize extended advertising (replaces legacy PROC_GAP_PERIPH_ADVERTISE_START_FAST) */
     APP_ALERT_Init();
+    APP_BATTERY_Init();
     APP_LEAK_Init();
 
     /* USER CODE END APP_BLE_Init_3 */

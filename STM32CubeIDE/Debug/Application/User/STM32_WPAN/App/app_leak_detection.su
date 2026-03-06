@@ -6,3 +6,4 @@ C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:142:13:LR_Debounce_Cb	16	static
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:147:13:Leak_Process_Task	24	static
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:172:13:LR_Switch_Task	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:178:6:APP_LEAK_Update_Battery	24	static

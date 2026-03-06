@@ -371,6 +371,8 @@ typedef enum
   CFG_TASK_ALERT_TICK,
   CFG_TASK_ALERT_OFF,
   CFG_TASK_LR_SWITCH,
+  CFG_TASK_BATT_READ,
+  CFG_TASK_LOWBATT_BEEP,
   /* USER CODE END CFG_Task_Id_t */
   CFG_TASK_NBR /* Shall be LAST in the list */
 } CFG_Task_Id_t;
