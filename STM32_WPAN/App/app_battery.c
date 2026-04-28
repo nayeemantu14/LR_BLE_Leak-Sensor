@@ -172,7 +172,10 @@ static void Batt_Read_Task(void)
       APP_ALERT_Stop_LowBatt();
     }
 
-    LOG_INFO_APP(">> BATT: %d%% (%.2fV, raw=%u)\n", batt_pct, batt_voltage, raw);
+    /* Integer millivolt print — avoids needing -u _printf_float (saves ~8 KB) */
+    uint32_t batt_mv = (uint32_t)(batt_voltage * 1000.0f + 0.5f);
+    LOG_INFO_APP(">> BATT: %d%% (%lu.%02luV, raw=%u)\n",
+                 batt_pct, batt_mv / 1000UL, (batt_mv % 1000UL) / 10UL, raw);
   }
   else
   {
@@ -183,20 +186,21 @@ static void Batt_Read_Task(void)
 /**
  * @brief  Convert battery voltage to percentage using piecewise linear interpolation.
  * @note   CR2032 coin cell: 3.0V nominal, 2.0V cutoff.
- *         Discharge curve mapped as:
- *           2.7V = 0%   (effectively dead for BLE operation)
- *           2.8V = 10%
- *           2.85V = 30%
- *           2.9V = 50%
- *           2.95V = 70%
- *           3.0V = 100%
+ *         TPS63900 buck-boost operates down to 1.8V input.
+ *         Discharge curve mapped to CR2032 profile at ~0.2mA:
+ *           2.0V =   0%  (TPS63900 lower limit with margin)
+ *           2.5V =   5%  (deep discharge — replace soon)
+ *           2.7V =  20%  (discharge knee — low battery warning)
+ *           2.8V =  40%  (transitioning out of flat region)
+ *           2.9V =  75%  (still in flat discharge region)
+ *           3.0V = 100%  (fresh cell)
  * @param  v  Battery voltage in volts
  * @retval Battery percentage (0-100)
  */
 static uint8_t batt_voltage_to_percent(float v)
 {
-  const float voltage_points[]  = {2.7f, 2.8f, 2.85f, 2.9f, 2.95f, 3.0f};
-  const uint8_t percent_points[] = {0,    10,   30,    50,   70,    100};
+  const float voltage_points[]  = {2.0f, 2.5f, 2.7f, 2.8f, 2.9f, 3.0f};
+  const uint8_t percent_points[] = {0,    5,    20,   40,   75,   100};
   const int num_points = 6;
 
   if (v <= voltage_points[0])

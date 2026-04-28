@@ -2,5 +2,5 @@ C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_battery.c:105:13:Batt_Period_Cb	16	static
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_battery.c:114:13:Batt_Settle_Cb	16	static
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_battery.c:120:13:Batt_Read_Task	56	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_battery.c:196:16:batt_voltage_to_percent	72	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_battery.c:229:17:batt_get_period	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_battery.c:200:16:batt_voltage_to_percent	72	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_battery.c:233:17:batt_get_period	16	static
