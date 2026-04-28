@@ -12,34 +12,42 @@
 #define ELEAK_FW_MINOR  1
 #define ELEAK_FW_PATCH  0
 
-/* ---------------------------------------------------------------------------
- * EXTI-based leak detection for PC13 (backup-domain pin) with storm prevention.
- *
- * PC13 on STM32WBA is TAMP1/WKUP4 — a backup-domain pin that does NOT
- * support internal pull-up/pull-down.  The external pull-up R9 (390 K)
- * is marginal: BLE radio RF coupling at +10 dBm can cause brief LOW
- * glitches during TX events.
- *
- * Three fixes applied vs. naive EXTI debounce:
- *
- * 1. EXTI13 priority lowered to 6 (below RADIO_INTR_PRIO_HIGH = 0).
- *    CubeMX sets it to 0, same as the active radio ISR.  Since EXTI13
- *    has a lower IRQ number than RADIO_IRQn, it wins arbitration and
- *    preempts radio operations — disrupting BLE timing during the very
- *    TX events that cause RF coupling.
- *
- * 2. EXTI13 is disabled inside the callback and only re-enabled after
- *    the debounce task completes.  This prevents the "EXTI storm" where
- *    each advertising TX (~every 375 ms) generates rising + falling edges
- *    that continuously restart the debounce timer.
- *
- * 3. Debounce period = 500 ms (not 200 ms).  This ensures the pin read
- *    lands between advertising events regardless of interval jitter.
- *
- * Hardware fix for next board rev: change R9 from 390 K to 47 K.
- * --------------------------------------------------------------------------- */
+/* Debounce period in ms.  Must exceed the longest RF coupling glitch
+ * (~1.5 ms from BLE TX at +10 dBm on the weak 390 KOhm pull-up). */
+#define LEAK_DEBOUNCE_MS  50
 
-#define LEAK_DEBOUNCE_MS    500U   /* Debounce delay (ms) — must exceed adv interval */
+/* ---------------------------------------------------------------------------
+ * EXTI-based leak detection for PC13 (MSense).
+ *
+ * PC13 is a backup-domain pin on STM32WBA.  GPIO PUPDR pull-ups are silently
+ * ignored by the hardware.  An external 390 KOhm pull-up on the PCB provides
+ * the HIGH level when the sensor probes are dry.  When water bridges the
+ * probes, the pin is pulled LOW.
+ *
+ * CRITICAL: CFG_BUTTON_SUPPORTED must be 0 in app_conf.h.
+ * The BSP maps PC13 to Button 2 (B2_PIN = GPIO_PIN_13 in b_wba5m_wpan.h).
+ * If enabled, the BSP hijacks EXTI13 and calls aci_gap_clear_security_db()
+ * on every edge, completely preventing leak detection.
+ *
+ * EXTI13 priority is lowered from 0 (CubeMX default, same as radio) to 6
+ * in the USER CODE MX_GPIO_Init_2 block of main.c.
+ *
+ * Detection flow:
+ *   1. CubeMX configures PC13 as GPIO_MODE_IT_RISING_FALLING (both edges)
+ *   2. USER CODE lowers EXTI13 priority to 6 (radio = 0, RCC = 1)
+ *   3. EXTI13 fires on edge -> ISR disables EXTI13 NVIC, starts debounce timer
+ *   4. After 50 ms the timer fires -> schedules sequencer task
+ *   5. Task reads PC13 pin level: LOW = leak, HIGH = no leak
+ *   6. If state changed: updates adv data, starts/stops alert
+ *   7. Clears EXTI13 pending flags, re-enables EXTI13 NVIC
+ *
+ * Disabling EXTI13 during debounce prevents interrupt storms from RF coupling
+ * (BLE TX at +10 dBm induces ~1.5 ms LOW glitches on the weak pull-up).
+ * The 50 ms debounce comfortably exceeds the glitch duration.
+ *
+ * Power-up: A 500 ms beep indicates the device has powered on.
+ * If the sensor probes are already wet at boot, leak state is set immediately.
+ * --------------------------------------------------------------------------- */
 
 static uint8_t a_EleakAdvData[23] = {
   0x02, 0x0A, 0x1F,                              /* TX Power Level (+10 dBm) */
@@ -52,25 +60,20 @@ static uint8_t a_EleakAdvData[23] = {
 static Adv_Set_t eleak_adv_set;
 static UTIL_TIMER_Object_t leak_debounce_timer;
 static UTIL_TIMER_Object_t lr_debounce_timer;
-static uint8_t leak_state;
-static volatile uint8_t exti_debouncing;  /* 1 = debounce in progress, ignore edges */
+static UTIL_TIMER_Object_t powerup_beep_timer;
+static uint8_t leak_state;        /* 0 = no leak, 1 = leak */
 static uint8_t a_peeraddr[8];
+static volatile uint8_t init_done; /* gates EXTI callbacks until APP_LEAK_Init completes */
 
 static void Leak_Process_Task(void);
 static void LR_Switch_Task(void);
 static void Leak_Debounce_Cb(void *arg);
 static void LR_Debounce_Cb(void *arg);
+static void Powerup_Beep_Cb(void *arg);
 
 void APP_LEAK_Init(void)
 {
   tBleStatus status;
-
-  /*
-   * Disable MSense and LR_BUT EXTIs during init.
-   * MX_GPIO_Init() enables these at priority 0 before timers/tasks exist.
-   */
-  HAL_NVIC_DisableIRQ(EXTI13_IRQn);
-  HAL_NVIC_DisableIRQ(EXTI7_IRQn);
 
   /* Register sequencer tasks */
   UTIL_SEQ_RegTask(1U << CFG_TASK_LEAK_PROCESS, UTIL_SEQ_RFU, Leak_Process_Task);
@@ -79,6 +82,7 @@ void APP_LEAK_Init(void)
   /* Create debounce timers */
   UTIL_TIMER_Create(&leak_debounce_timer, 0, UTIL_TIMER_ONESHOT, Leak_Debounce_Cb, NULL);
   UTIL_TIMER_Create(&lr_debounce_timer, 0, UTIL_TIMER_ONESHOT, LR_Debounce_Cb, NULL);
+  UTIL_TIMER_Create(&powerup_beep_timer, 0, UTIL_TIMER_ONESHOT, Powerup_Beep_Cb, NULL);
 
   /* Read LR_BUT pin to select PHY: GND = Coded PHY (Long Range), HIGH = 1M PHY */
   uint8_t lr_mode = (HAL_GPIO_ReadPin(LR_BUT_GPIO_Port, LR_BUT_Pin) == GPIO_PIN_RESET) ? 1 : 0;
@@ -149,76 +153,92 @@ void APP_LEAK_Init(void)
 
   if (status == BLE_STATUS_SUCCESS)
   {
-    LOG_INFO_APP(">> LEAK: Extended advertising started\n");
+    LOG_INFO_APP(">> LEAK: Advertising started\n");
   }
   else
   {
     LOG_INFO_APP(">> LEAK: aci_gap_adv_set_enable FAILED 0x%02X\n", status);
   }
 
-  /* Default state: no leak.  Do NOT read the pin here — radio is active
-   * and the weak 390 K pull-up can't guarantee a clean read.
-   * The first EXTI edge will trigger the debounce → read cycle. */
+  /* Default state: no leak */
   leak_state = 0;
-  exti_debouncing = 0;
   a_EleakAdvData[18] = 0;
 
-  LOG_INFO_APP(">> LEAK: Initial state = No leak (EXTI debounce = %u ms)\n",
-               LEAK_DEBOUNCE_MS);
+  /* Power-up indication beep (500 ms buzzer + LED).  Block Stop1 while the
+   * buzzer drives so the audio is clean; Powerup_Beep_Cb releases the hold. */
+  APP_ALERT_BlockLPM();
+  HAL_GPIO_WritePin(Buzze_GPIO_Port, Buzze_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(Alarm_Led_GPIO_Port, Alarm_Led_Pin, GPIO_PIN_SET);
+  UTIL_TIMER_StartWithPeriod(&powerup_beep_timer, 500);
+  LOG_INFO_APP(">> LEAK: Power-up beep\n");
 
-  /* Clear any pending flags that accumulated during init */
+  /* Check initial pin state — detect leak already present at power-up.
+   * PC13 is already configured as GPIO_MODE_IT_RISING_FALLING by CubeMX
+   * MX_GPIO_Init.  EXTI13 priority was lowered to 6 in MX_GPIO_Init_2. */
+  if (HAL_GPIO_ReadPin(MSense_GPIO_Port, MSense_Pin) == GPIO_PIN_RESET)
+  {
+    leak_state = 1;
+    a_EleakAdvData[18] = 1;
+    aci_gap_adv_set_adv_data(0, HCI_SET_ADV_DATA_OPERATION_COMPLETE, 0,
+                             sizeof(a_EleakAdvData), a_EleakAdvData);
+    APP_ALERT_Start_Leak();
+    LOG_INFO_APP(">> LEAK: LEAK DETECTED at power-up (PC13 LOW)\n");
+  }
+
+  /* Clear any pending EXTI flags accumulated during BLE init, then unblock
+   * the EXTI callbacks.  CFG_BUTTON_SUPPORTED = 0 in app_conf.h prevents
+   * the BSP from hijacking EXTI13 as Button 2 (B2_PIN = GPIO_PIN_13). */
   __HAL_GPIO_EXTI_CLEAR_IT(MSense_Pin);
   __HAL_GPIO_EXTI_CLEAR_IT(LR_BUT_Pin);
   NVIC_ClearPendingIRQ(EXTI13_IRQn);
   NVIC_ClearPendingIRQ(EXTI7_IRQn);
+  init_done = 1;
 
-  /*
-   * FIX: Lower EXTI13 priority from 0 to 6.
-   * CubeMX sets it to 0 — same as RADIO_INTR_PRIO_HIGH.  Since EXTI13
-   * has a lower IRQ number than RADIO_IRQn, it wins arbitration and
-   * preempts the radio during TX events.  This disrupts BLE timing and
-   * causes a positive feedback loop: disrupted radio → retries → more
-   * RF coupling → more EXTI edges → more disruption.
-   * Priority 6 is safely below radio (0) and RCC (1).
-   */
-  HAL_NVIC_SetPriority(EXTI13_IRQn, 6, 0);
-  HAL_NVIC_EnableIRQ(EXTI13_IRQn);
-
-  HAL_NVIC_SetPriority(EXTI7_IRQn, 6, 0);
-  HAL_NVIC_EnableIRQ(EXTI7_IRQn);
+  LOG_INFO_APP(">> LEAK: EXTI-based detection armed (PC13 = %s)\n",
+               (HAL_GPIO_ReadPin(MSense_GPIO_Port, MSense_Pin) == GPIO_PIN_RESET)
+               ? "LOW/wet" : "HIGH/dry");
 }
 
 /**
- * @brief  MSense EXTI callback — debounce with storm prevention.
+ * @brief  EXTI callback for PC13 (MSense) — called from ISR context.
  *
- * Called on both rising and falling edges of PC13 (MSense).
- * Disables EXTI13 immediately to prevent RF-coupled edge storm, then
- * starts a 500 ms one-shot debounce timer.  EXTI13 is re-enabled only
- * after Leak_Process_Task reads the pin and acts on the result.
+ * Immediately disables EXTI13 NVIC to prevent interrupt storm from RF
+ * coupling glitches, then starts a 50 ms debounce timer.  The timer callback
+ * schedules a sequencer task that reads the settled pin level.
  */
 void APP_LEAK_EXTI_Callback(void)
 {
-  if (exti_debouncing)
+  /* Drop edges that arrive before APP_LEAK_Init has created the timers.
+   * The HAL has already cleared the EXTI pending flag by the time we get
+   * here, so no further cleanup is needed. */
+  if (!init_done)
   {
-    return;  /* Already debouncing — ignore this edge */
+    return;
   }
-  exti_debouncing = 1;
 
-  /* Disable EXTI13 to stop the edge storm.
-   * RF coupling on the weak 390 K pull-up generates edges on every
-   * advertising TX event.  Without this, the debounce timer gets
-   * continuously restarted and never completes. */
+  /* Disable EXTI13 to prevent re-entry during debounce */
   HAL_NVIC_DisableIRQ(EXTI13_IRQn);
 
+  /* Restart debounce timer (resets if already running) */
+  UTIL_TIMER_Stop(&leak_debounce_timer);
   UTIL_TIMER_StartWithPeriod(&leak_debounce_timer, LEAK_DEBOUNCE_MS);
 }
 
 void APP_LEAK_LR_Callback(void)
 {
+  if (!init_done)
+  {
+    return;
+  }
+
   UTIL_TIMER_Stop(&lr_debounce_timer);
   UTIL_TIMER_StartWithPeriod(&lr_debounce_timer, 50);
 }
 
+/**
+ * @brief  Leak debounce timer callback — fires 50 ms after last EXTI edge.
+ * @note   Timer ISR context — schedule sequencer task for main-loop processing.
+ */
 static void Leak_Debounce_Cb(void *arg)
 {
   (void)arg;
@@ -232,21 +252,39 @@ static void LR_Debounce_Cb(void *arg)
 }
 
 /**
- * @brief  Leak process task — reads pin after debounce, re-enables EXTI.
+ * @brief  Power-up beep timer callback — turns off buzzer/LED after 500 ms.
+ * @note   Timer ISR context.  GPIO writes are safe from ISR.
+ *         If a leak was detected at power-up, the leak alert now owns the
+ *         buzzer/LED, so we skip turning them off.
+ */
+static void Powerup_Beep_Cb(void *arg)
+{
+  (void)arg;
+  if (!leak_state)
+  {
+    HAL_GPIO_WritePin(Buzze_GPIO_Port, Buzze_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(Alarm_Led_GPIO_Port, Alarm_Led_Pin, GPIO_PIN_RESET);
+  }
+  /* Release the LPM hold whether or not we turned the buzzer off — if a
+   * leak is now active, the alert state machine has its own LPM hold. */
+  APP_ALERT_ReleaseLPM();
+}
+
+/**
+ * @brief  Leak process task — runs in main loop after debounce.
  *
- * Called 500 ms after the EXTI edge.  EXTI13 is disabled during this
- * entire window, so no new edges can interfere.  The 500 ms delay
- * guarantees the read lands in a quiet gap between advertising events
- * (interval 312.5–437.5 ms, TX burst ~1.5 ms).
+ * Reads the actual PC13 pin level to determine leak state:
+ *   LOW  = water bridging probes = leak detected
+ *   HIGH = external pull-up = dry = no leak
+ *
+ * Only acts on state changes to avoid redundant BLE updates and alerts.
+ * After processing, clears EXTI13 pending flags and re-enables the NVIC
+ * so the next real edge is caught.
  */
 static void Leak_Process_Task(void)
 {
   GPIO_PinState pin = HAL_GPIO_ReadPin(MSense_GPIO_Port, MSense_Pin);
   uint8_t new_state = (pin == GPIO_PIN_RESET) ? 1 : 0;
-
-  LOG_INFO_APP(">> LEAK: Pin read = %s (current state = %s)\n",
-               new_state ? "LOW (wet)" : "HIGH (dry)",
-               leak_state ? "LEAK" : "No leak");
 
   if (new_state != leak_state)
   {
@@ -259,27 +297,25 @@ static void Leak_Process_Task(void)
     if (leak_state)
     {
       APP_ALERT_Start_Leak();
-      LOG_INFO_APP(">> LEAK: LEAK DETECTED\n");
+      LOG_INFO_APP(">> LEAK: LEAK DETECTED (PC13 LOW after debounce)\n");
     }
     else
     {
       APP_ALERT_Stop();
-      LOG_INFO_APP(">> LEAK: Leak cleared\n");
+      LOG_INFO_APP(">> LEAK: Leak cleared (PC13 HIGH after debounce)\n");
     }
   }
 
-  /* Re-enable EXTI13 to detect next transition.
-   * Clear both the EXTI peripheral flag and NVIC pending bit to
-   * prevent an immediate re-trigger from stale edges. */
+  /* Re-enable EXTI13: clear pending flags first to avoid immediate re-trigger
+   * from edges that occurred during the debounce window. */
   __HAL_GPIO_EXTI_CLEAR_IT(MSense_Pin);
   NVIC_ClearPendingIRQ(EXTI13_IRQn);
   HAL_NVIC_EnableIRQ(EXTI13_IRQn);
-  exti_debouncing = 0;
 }
 
 static void LR_Switch_Task(void)
 {
-  LOG_INFO_APP(">> LEAK: LR switch changed — resetting MCU\n");
+  LOG_INFO_APP(">> LEAK: LR switch toggled — resetting MCU\n");
   NVIC_SystemReset();
 }
 

@@ -274,7 +274,7 @@ typedef enum
   CFG_LPM_LL_HW_RCO_CLBR,
   CFG_LPM_PKA_OVR_IT,
   /* USER CODE BEGIN CFG_LPM_Id_t */
-
+  CFG_LPM_BUZZER,    /* held by leak/lowbatt alert + power-up beep while buzzer is ON */
   /* USER CODE END CFG_LPM_Id_t */
 } CFG_LPM_Id_t;
 
@@ -540,7 +540,33 @@ typedef enum
  * When CFG_BUTTON_SUPPORTED is set, the push button are activated if requested
  */
 #define CFG_LED_SUPPORTED                       (1)
-#define CFG_BUTTON_SUPPORTED                    (1)
+#define CFG_BUTTON_SUPPORTED                    (0)  /* PC13 = MSense (EXTI leak detect), not a button */
+
+/*
+ * Build-config-driven LPM / trace / debugger control.
+ * Mirrors the valve firmware (DK-Servo_Motor) pattern: a single #ifdef DEBUG
+ * switch in USER CODE drives all build-time overrides, surviving CubeMX regen.
+ *
+ * STM32CubeIDE build configurations:
+ *   Debug   — DEBUG defined.  Development build: UART traces ON, SWD attach OK,
+ *             Stop1 disabled (LPM=0) so the debugger / printf work reliably.
+ *             Idle current is high (Run/Sleep mode); not battery-friendly.
+ *   Release — DEBUG NOT defined.  Production build: traces OFF, SWD pins to
+ *             analog, DBGMCU disabled, Stop1 enabled.  This is the only mode
+ *             that achieves single-digit-uA idle between BLE TX bursts.
+ *
+ * Workflow:
+ *   - Debugging / iterating: use Debug config (Project -> Build Configurations).
+ *   - Power measurement / production flashing: switch to Release config.
+ *   - Logs are only available in Debug builds.
+ */
+#ifdef DEBUG
+  #undef  CFG_LPM_LEVEL
+  #define CFG_LPM_LEVEL    (0U)   /* keep chip in Run/Sleep — debugger-friendly */
+#else
+  #undef  CFG_LPM_LEVEL
+  #define CFG_LPM_LEVEL    (2U)   /* triggers LOG/DEBUGGER/LED auto-disable below */
+#endif /* DEBUG */
 
 /**
  * Overwrite some configuration imposed by Low Power level selected.

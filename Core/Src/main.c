@@ -102,7 +102,28 @@ int main(void)
   SystemPower_Config();
 
   /* USER CODE BEGIN SysInit */
-
+  /*
+   * CRITICAL: clear any stale PWR wake-up pin enables left in PWR registers
+   * by previous firmware (these survive software reset).  Earlier firmware
+   * with CFG_BUTTON_SUPPORTED=1 called HAL_PWR_EnableWakeUpPin(PWR_WAKEUP_PIN2_HIGH_1)
+   * for PC13 (Button 2 / MSense).  PC13 is held HIGH by the external 390K
+   * pull-up, so a stale level-triggered wake-up enable causes WKUP_IRQn to
+   * fire continuously, starving BLE init and producing a reset loop.
+   *
+   * SystemPower_Config() above already enabled WKUP_IRQn at the NVIC, so
+   * disabling the wake-up pins here is the earliest safe place to break
+   * the storm.  Clear all 8 wake-up pin enables and pending flags.
+   */
+  HAL_PWR_DisableWakeUpPin(PWR_WAKEUP_PIN1);
+  HAL_PWR_DisableWakeUpPin(PWR_WAKEUP_PIN2);
+  HAL_PWR_DisableWakeUpPin(PWR_WAKEUP_PIN3);
+  HAL_PWR_DisableWakeUpPin(PWR_WAKEUP_PIN4);
+  HAL_PWR_DisableWakeUpPin(PWR_WAKEUP_PIN5);
+  HAL_PWR_DisableWakeUpPin(PWR_WAKEUP_PIN6);
+  HAL_PWR_DisableWakeUpPin(PWR_WAKEUP_PIN7);
+  HAL_PWR_DisableWakeUpPin(PWR_WAKEUP_PIN8);
+  /* Clear all WUF1..WUF8 wake-up flags by writing 1s to CWUFx in WUSCR */
+  WRITE_REG(PWR->WUSCR, 0xFFU);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -621,7 +642,20 @@ void MX_GPIO_Init(void)
   HAL_NVIC_EnableIRQ(EXTI13_IRQn);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
-
+  /*
+   * Lower EXTI13 (PC13/MSense) and EXTI7 (PB7/LR_BUT) priorities from 0
+   * (CubeMX default = same as RADIO_INTR_PRIO_HIGH) to 6.  BLE radio runs
+   * at priority 0; leak/switch interrupts must NOT preempt the radio.
+   *
+   * Both EXTIs remain ENABLED.  The callbacks in app_leak_detection.c gate
+   * on `init_done` so they're safe before APP_LEAK_Init runs.
+   *
+   * Mask TAMP_IRQn defensively — protects against any stale TAMP1 config
+   * left by an older firmware in the backup domain.
+   */
+  HAL_NVIC_SetPriority(EXTI13_IRQn, 6, 0);
+  HAL_NVIC_SetPriority(EXTI7_IRQn, 6, 0);
+  HAL_NVIC_DisableIRQ(TAMP_IRQn);
   /* USER CODE END MX_GPIO_Init_2 */
 }
 

@@ -117,7 +117,7 @@ void MX_StandbyExit_PeripheralInit(void)
 #endif /* USE_TEMPERATURE_BASED_RADIO_CALIBRATION */
 
   /* USER CODE BEGIN MX_STANDBY_EXIT_PERIPHERAL_INIT_2 */
-  APP_BSP_ButtonInit();
+  /* APP_BSP_ButtonInit() removed — B2 = PC13 = MSense, handled by EXTI */
   /* USER CODE END MX_STANDBY_EXIT_PERIPHERAL_INIT_2 */
 }
 #endif /* (CFG_LPM_STANDBY_SUPPORTED == 1) */
