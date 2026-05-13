@@ -485,7 +485,25 @@ void UTIL_SEQ_Idle( void )
 void UTIL_SEQ_PreIdle( void )
 {
   /* USER CODE BEGIN UTIL_SEQ_PreIdle_1 */
-
+  /*
+   * We disabled CFG_LPM_STANDBY_SUPPORTED in app_conf.h so the MCU caps at
+   * Stop1 and EXTI wake works (Standby on WBA does NOT wake from EXTI).
+   * Side effect: the CubeMX-generated conditional below
+   *   #if ((CFG_LPM_STANDBY_SUPPORTED == 1) || (CFG_LPM_STOP2_SUPPORTED == 1))
+   *     ... APP_SYS_BLE_EnterDeepSleep(); ...
+   *   #endif
+   * compiles out, so the radio link layer never enters its own deep sleep —
+   * radio clocks stay alive, idle current ~2.5 mA.
+   *
+   * Call APP_SYS_BLE_EnterDeepSleep() from USER CODE here so the radio LL
+   * still deep-sleeps before MCU enters Stop1.  Net: low power AND EXTI wake.
+   */
+#if (CFG_LPM_LEVEL != 0) && (CFG_LPM_STANDBY_SUPPORTED == 0) && (CFG_LPM_STOP2_SUPPORTED == 0)
+  if (system_startup_done != FALSE)
+  {
+    APP_SYS_BLE_EnterDeepSleep();
+  }
+#endif
   /* USER CODE END UTIL_SEQ_PreIdle_1 */
 #if ( CFG_LPM_LEVEL != 0)
   LL_PWR_ClearFlag_STOP();

@@ -82,7 +82,6 @@ Application/User/Core/app_entry.o: \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h \
  ../../Core/Inc/app_entry.h ../../Core/Inc/stm32_rtos.h \
  ../../Utilities/sequencer/stm32_seq.h \
- ../../Utilities/lpm/tiny_lpm/stm32_lpm.h \
  ../../Utilities/tim_serv/stm32_timer.h \
  ../../Projects/Common/WPAN/Modules/MemoryManager/advanced_memory_manager.h \
  ../../Projects/Common/WPAN/Modules/stm_list.h \
@@ -204,7 +203,6 @@ Application/User/Core/app_entry.o: \
 ../../Core/Inc/app_entry.h:
 ../../Core/Inc/stm32_rtos.h:
 ../../Utilities/sequencer/stm32_seq.h:
-../../Utilities/lpm/tiny_lpm/stm32_lpm.h:
 ../../Utilities/tim_serv/stm32_timer.h:
 ../../Projects/Common/WPAN/Modules/MemoryManager/advanced_memory_manager.h:
 ../../Projects/Common/WPAN/Modules/stm_list.h:

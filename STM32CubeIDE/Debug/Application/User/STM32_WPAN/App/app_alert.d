@@ -81,6 +81,8 @@ Application/User/STM32_WPAN/App/app_alert.o: \
  ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_dma.h \
  ../../Core/Inc/app_common.h ../../Utilities/tim_serv/stm32_timer.h \
  ../../Utilities/sequencer/stm32_seq.h \
+ ../../Utilities/lpm/tiny_lpm/stm32_lpm.h \
+ ../../System/Interfaces/stm32_lpm_if.h \
  ../../Projects/Common/WPAN/Modules/Log/log_module.h \
  ../../System/Config/Log/log_module_conf.h
 C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_alert.h:
@@ -169,5 +171,7 @@ C:/Work/Projects/ST\ Workspace/LR_BLE_Leak\ Sensor/BLE_HR_P2PServer/STM32_WPAN/A
 ../../Core/Inc/app_common.h:
 ../../Utilities/tim_serv/stm32_timer.h:
 ../../Utilities/sequencer/stm32_seq.h:
+../../Utilities/lpm/tiny_lpm/stm32_lpm.h:
+../../System/Interfaces/stm32_lpm_if.h:
 ../../Projects/Common/WPAN/Modules/Log/log_module.h:
 ../../System/Config/Log/log_module_conf.h:

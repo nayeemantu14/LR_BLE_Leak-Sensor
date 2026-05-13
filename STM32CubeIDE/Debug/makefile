@@ -57,37 +57,37 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := BLE_HR_P2PServer
+BUILD_ARTIFACT_NAME := Leak_Sensor_BLELongRange
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-BLE_HR_P2PServer.elf \
+Leak_Sensor_BLELongRange.elf \
 
 MAP_FILES += \
-BLE_HR_P2PServer.map \
+Leak_Sensor_BLELongRange.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-BLE_HR_P2PServer.list \
+Leak_Sensor_BLELongRange.list \
 
 OBJCOPY_BIN += \
-BLE_HR_P2PServer.bin \
+Leak_Sensor_BLELongRange.bin \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: BLE_HR_P2PServer.elf secondary-outputs
+main-build: Leak_Sensor_BLELongRange.elf secondary-outputs
 
 # Tool invocations
-BLE_HR_P2PServer.elf BLE_HR_P2PServer.map: $(OBJS) $(USER_OBJS) C:\Work\Projects\ST\ Workspace\LR_BLE_Leak\ Sensor\BLE_HR_P2PServer\STM32CubeIDE\STM32WBA5MMGHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "BLE_HR_P2PServer.elf" @"objects.list" $(USER_OBJS) -Wl,--start-group $(LIBS) -Wl,--end-group -mcpu=cortex-m33 -T"C:\Work\Projects\ST Workspace\LR_BLE_Leak Sensor\BLE_HR_P2PServer\STM32CubeIDE\STM32WBA5MMGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLE_HR_P2PServer.map" -Wl,--gc-sections -static -L../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/lib -L../../Middlewares/ST/STM32_WPAN/ble/stack/lib -z noexecstack --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Leak_Sensor_BLELongRange.elf Leak_Sensor_BLELongRange.map: $(OBJS) $(USER_OBJS) C:\Work\Projects\ST\ Workspace\LR_BLE_Leak\ Sensor\BLE_HR_P2PServer\STM32CubeIDE\STM32WBA5MMGHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Leak_Sensor_BLELongRange.elf" @"objects.list" $(USER_OBJS) -Wl,--start-group $(LIBS) -Wl,--end-group -mcpu=cortex-m33 -T"C:\Work\Projects\ST Workspace\LR_BLE_Leak Sensor\BLE_HR_P2PServer\STM32CubeIDE\STM32WBA5MMGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Leak_Sensor_BLELongRange.map" -Wl,--gc-sections -static -L../../Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/lib -L../../Middlewares/ST/STM32_WPAN/ble/stack/lib -z noexecstack --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -96,19 +96,19 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-BLE_HR_P2PServer.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "BLE_HR_P2PServer.list"
+Leak_Sensor_BLELongRange.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Leak_Sensor_BLELongRange.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-BLE_HR_P2PServer.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "BLE_HR_P2PServer.bin"
+Leak_Sensor_BLELongRange.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "Leak_Sensor_BLELongRange.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) BLE_HR_P2PServer.bin BLE_HR_P2PServer.elf BLE_HR_P2PServer.list BLE_HR_P2PServer.map default.size.stdout
+	-$(RM) Leak_Sensor_BLELongRange.bin Leak_Sensor_BLELongRange.elf Leak_Sensor_BLELongRange.list Leak_Sensor_BLELongRange.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)

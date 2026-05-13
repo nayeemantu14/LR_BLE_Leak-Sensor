@@ -1,38 +1,8 @@
-../../Drivers/CMSIS/Include/core_cm33.h:2390:22:__NVIC_EnableIRQ	2
-../../Drivers/CMSIS/Include/core_cm33.h:2587:22:__NVIC_SetPriority	2
-../../Drivers/CMSIS/Include/core_cm33.h:2609:26:__NVIC_GetPriority	2
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:1228:26:LL_RCC_LSE_IsReady	2
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:1350:22:LL_RCC_LSI2_Enable	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:1360:22:LL_RCC_LSI2_Disable	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:1370:26:LL_RCC_LSI2_IsReady	2
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:1546:22:LL_RCC_SetSystickClockSource	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:1654:26:LL_RCC_GetSystickClockSource	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pwr.h:501:22:LL_PWR_SetPowerMode	1
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pwr.h:699:22:LL_PWR_EnableUltraLowPowerMode	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pwr.h:1619:22:LL_PWR_EnableBkUpAccess	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pwr.h:1639:26:LL_PWR_IsEnabledBkUpAccess	2
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pwr.h:2072:26:LL_PWR_IsActiveFlag_SB	2
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pwr.h:2082:26:LL_PWR_IsActiveFlag_STOP	2
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pwr.h:2127:26:LL_PWR_IsActiveFlag_ACTVOS	2
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_cortex.h:317:22:LL_LPM_EnableSleep	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_cortex.h:328:22:LL_LPM_EnableDeepSleep	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_gpio.h:783:26:LL_GPIO_ReadInputPort	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_gpio.h:824:22:LL_GPIO_WriteOutputPort	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_icache.h:219:22:LL_ICACHE_Enable	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_icache.h:229:22:LL_ICACHE_Disable	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_icache.h:239:26:LL_ICACHE_IsEnabled	2
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:192:23:Standby_Restore_GPIO	6
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:347:23:Enter_Stop_Standby_Mode	2
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:374:23:Exit_Stop_Standby_Mode	4
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:412:23:PWR_EnterOffMode	2
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:500:23:PWR_ExitOffMode	10
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:669:23:PWR_EnterStopMode	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:703:23:PWR_ExitStopMode	1
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:727:23:PWR_EnterSleepMode	1
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:746:23:PWR_ExitSleepMode	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:759:10:is_boot_from_standby	10
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:849:10:LPM_is_wakeup_time_profiling_done	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:759:10:is_boot_from_standby	3
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:856:6:LPM_IdleMode	1
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:863:6:LPM_SleepMode	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:870:6:LPM_Stop1Mode	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/System/Interfaces/stm32_lpm_if.c:878:6:LPM_StandbyMode	1

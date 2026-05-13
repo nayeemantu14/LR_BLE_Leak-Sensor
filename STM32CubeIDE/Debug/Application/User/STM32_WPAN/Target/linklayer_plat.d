@@ -85,9 +85,7 @@ Application/User/STM32_WPAN/Target/linklayer_plat.o: \
  ../../Projects/Common/WPAN/Modules/Log/log_module.h \
  ../../System/Config/Log/log_module_conf.h \
  ../../Projects/Common/WPAN/Modules/adc_ctrl.h \
- ../../Projects/Common/WPAN/Modules/utilities_common.h \
- ../../Utilities/lpm/tiny_lpm/stm32_lpm.h \
- ../../System/Interfaces/stm32_lpm_if.h
+ ../../Projects/Common/WPAN/Modules/utilities_common.h
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal.h:
 ../../Core/Inc/stm32wbaxx_hal_conf.h:
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_hal_dma.h:
@@ -179,5 +177,3 @@ Application/User/STM32_WPAN/Target/linklayer_plat.o: \
 ../../System/Config/Log/log_module_conf.h:
 ../../Projects/Common/WPAN/Modules/adc_ctrl.h:
 ../../Projects/Common/WPAN/Modules/utilities_common.h:
-../../Utilities/lpm/tiny_lpm/stm32_lpm.h:
-../../System/Interfaces/stm32_lpm_if.h:

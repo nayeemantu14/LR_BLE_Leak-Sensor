@@ -30,4 +30,3 @@ C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_ble.c:1812:13:BLE_NvmCallback	16	static
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_ble.c:1823:13:fill_advData	32	static
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_ble.c:1917:12:BLECB_Indication	32	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_ble.c:1965:6:APP_BSP_Button2Action	16	static

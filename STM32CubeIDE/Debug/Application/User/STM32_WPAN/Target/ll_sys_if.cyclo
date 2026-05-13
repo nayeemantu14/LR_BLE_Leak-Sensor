@@ -9,3 +9,4 @@ C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Tar
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:199:9:ll_sys_BLE_sleep_clock_accuracy_selection	2
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:246:6:ll_sys_sleep_clock_source_selection	7
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:274:6:ll_sys_reset	5
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/Target/ll_sys_if.c:332:6:ll_sys_get_ble_profile_statistics	1

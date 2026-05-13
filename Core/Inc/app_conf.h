@@ -568,6 +568,30 @@ typedef enum
   #define CFG_LPM_LEVEL    (2U)   /* triggers LOG/DEBUGGER/LED auto-disable below */
 #endif /* DEBUG */
 
+/*
+ * CRITICAL: disable MCU STANDBY mode unconditionally.
+ *
+ * With CFG_LPM_STANDBY_SUPPORTED=1 (CubeMX default) AND no LPM client
+ * holding a lower mode, UTIL_LPM_GetMaxMode() returns STANDBY index,
+ * and UTIL_LPM_Enter() routes through LPM_StandbyMode -> MCU Standby.
+ *
+ * On STM32WBA, MCU Standby:
+ *   - Loses RAM (BLE state lost)
+ *   - Wakes ONLY from PWR wake-up pins (which we deliberately disable
+ *     in main.c SysInit), RTC alarms, IWDG/etc.
+ *   - Does NOT wake from EXTI lines.
+ *
+ * Symptom: in Release builds, leak detection (PC13 EXTI) and LR_BUT
+ * (PB7 EXTI) silently fail because the chip is asleep in Standby, not
+ * Stop1.  Disabling Standby caps UTIL_LPM_Enter at LPM_Stop1Mode where
+ * EXTI wakes work correctly and BLE state is retained.
+ *
+ * We never need Standby — the device must keep advertising continuously
+ * and react to leak events; losing RAM/BLE state defeats the purpose.
+ */
+#undef  CFG_LPM_STANDBY_SUPPORTED
+#define CFG_LPM_STANDBY_SUPPORTED   (0U)
+
 /**
  * Overwrite some configuration imposed by Low Power level selected.
  */

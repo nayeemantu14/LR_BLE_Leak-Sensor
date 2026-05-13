@@ -1,9 +1,4 @@
 ../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_rcc.h:3149:22:LL_RCC_ClearResetFlags	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_bus.h:1178:22:LL_AHB5_GRP1_EnableClock	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pwr.h:540:22:LL_PWR_SetSRAM2SBRetention	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pwr.h:597:22:LL_PWR_SetSRAM1SBRetention	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pwr.h:677:22:LL_PWR_SetRadioSBRetention	1
-../../Drivers/STM32WBAxx_HAL_Driver/Inc/stm32wbaxx_ll_pwr.h:2233:22:LL_PWR_ClearFlag_STOP	1
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:177:6:MX_APPE_Config	1
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:186:10:MX_APPE_Init	4
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:245:6:MX_APPE_Process	1
@@ -15,20 +10,20 @@ C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_e
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:442:13:APPE_PKACTRL_Init	1
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:448:13:APPE_AMM_Init	2
 C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:470:6:UTIL_SEQ_Idle	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:485:6:UTIL_SEQ_PreIdle	3
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:528:6:UTIL_SEQ_PostIdle	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:544:6:PKACTRL_CB_Process	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:552:6:HWCB_RNG_Process	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:557:6:AMM_RegisterBasicMemoryManager	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:565:6:AMM_ProcessRequest	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:571:13:AMM_WrapperInit	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:576:19:AMM_WrapperAllocate	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:581:13:AMM_WrapperFree	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:586:6:FM_ProcessRequest	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:621:6:UTIL_ADV_TRACE_PreSendHook	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:632:6:UTIL_ADV_TRACE_PostSendHook	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:650:6:Serial_CMD_Interpreter_CmdExecute	1
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:662:5:PKACTRL_MutexTake	2
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:682:5:PKACTRL_MutexRelease	2
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:697:5:PKACTRL_TakeSemEndOfOperation	2
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:722:5:PKACTRL_ReleaseSemEndOfOperation	2
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:485:6:UTIL_SEQ_PreIdle	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:546:6:UTIL_SEQ_PostIdle	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:562:6:PKACTRL_CB_Process	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:570:6:HWCB_RNG_Process	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:575:6:AMM_RegisterBasicMemoryManager	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:583:6:AMM_ProcessRequest	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:589:13:AMM_WrapperInit	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:594:19:AMM_WrapperAllocate	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:599:13:AMM_WrapperFree	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:604:6:FM_ProcessRequest	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:639:6:UTIL_ADV_TRACE_PreSendHook	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:650:6:UTIL_ADV_TRACE_PostSendHook	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:668:6:Serial_CMD_Interpreter_CmdExecute	1
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:680:5:PKACTRL_MutexTake	2
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:700:5:PKACTRL_MutexRelease	2
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:715:5:PKACTRL_TakeSemEndOfOperation	2
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/Core/Src/app_entry.c:740:5:PKACTRL_ReleaseSemEndOfOperation	2

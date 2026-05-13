@@ -1,10 +1,11 @@
 ../../Drivers/CMSIS/Include/core_cm33.h:2481:22:__NVIC_ClearPendingIRQ	16	static
 ../../Drivers/CMSIS/Include/core_cm33.h:2711:34:__NVIC_SystemReset	4	static,ignoring_inline_asm
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:64:6:APP_LEAK_Init	64	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:199:6:APP_LEAK_EXTI_Callback	8	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:216:6:APP_LEAK_LR_Callback	8	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:222:13:Leak_Debounce_Cb	16	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:228:13:LR_Debounce_Cb	16	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:242:13:Leak_Process_Task	24	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:280:13:LR_Switch_Task	8	static
-C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:286:6:APP_LEAK_Update_Battery	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:74:6:APP_LEAK_Init	64	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:209:6:APP_LEAK_EXTI_Callback	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:227:6:APP_LEAK_LR_Callback	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:242:13:Leak_Debounce_Cb	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:248:13:LR_Debounce_Cb	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:260:13:Powerup_Beep_Cb	16	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:284:13:Leak_Process_Task	24	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:316:13:LR_Switch_Task	8	static
+C:/Work/Projects/ST Workspace/LR_BLE_Leak Sensor/BLE_HR_P2PServer/STM32_WPAN/App/app_leak_detection.c:322:6:APP_LEAK_Update_Battery	24	static
