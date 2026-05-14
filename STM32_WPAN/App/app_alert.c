@@ -24,12 +24,20 @@ void APP_ALERT_ReleaseLPM(void) { BUZZER_LPM_RELEASE(); }
  *
  * Buzzer is a CMI-9605IC-0380T: internally-driven magnetic indicator,
  * 2.7 kHz internal oscillator, 30 mA at 3 V.  Drive method is DC on/off;
- * PWM-ing the supply distorts the internal oscillator and is NOT used.
+ * hardware PWM at 2.7 kHz starved the internal driver (silent).  This
+ * "soft-PWM" approach instead chops the DC supply at a much slower
+ * envelope (50-250 Hz) — each ON segment is long enough for the internal
+ * 2.7 kHz oscillator to start ringing, the OFF segment cuts current draw
+ * in half.  Audible result: 2.7 kHz tone with envelope buzz on top.
  *
- * Patterns are sized to keep average current well below the bulk-cap
- * + boost-converter sustained envelope at low cell voltage.  Single
- * pulses of <= 80 ms can be sustained from C1+C6 alone on a weak cell;
- * longer pulses risk browning out the boost.  See plan file.
+ * Tuning knobs (all three options give same burst duration + same total
+ * ON time; only the envelope frequency changes — try all three):
+ *
+ *   A) Slow chop:   on=10, off=10, repeat=10   → 50 Hz envelope
+ *   B) Medium chop: on=5,  off=5,  repeat=20   → 100 Hz envelope
+ *   C) Fast chop:   on=2,  off=2,  repeat=50   → 250 Hz envelope
+ *
+ * Pick whichever sounds best (subjectively or via mic) and stick with it.
  */
 typedef struct {
   uint16_t on_ms;       /* tone duration */
@@ -38,9 +46,21 @@ typedef struct {
   uint16_t cycle_ms;    /* time between burst starts; 0 = single-shot */
 } beep_pattern_t;
 
-static const beep_pattern_t pattern_leak    = { .on_ms = 60, .off_ms = 60, .repeat = 3, .cycle_ms = 8000  };
-static const beep_pattern_t pattern_lowbatt = { .on_ms = 40, .off_ms = 80, .repeat = 2, .cycle_ms = 30000 };
-static const beep_pattern_t pattern_powerup = { .on_ms = 80, .off_ms = 0,  .repeat = 1, .cycle_ms = 0     };
+/* Soft-PWM leak alert.  20% duty / 100 Hz envelope — keeps each ON pulse
+ * short enough (2 ms × 30 mA = 60 µC) that bulk cap absorbs most of it,
+ * with an 8 ms recovery gap for the boost to refill C6/C9.  Audible: each
+ * 2 ms pulse rings ~5 cycles of the internal 2.7 kHz oscillator. */
+/* All three patterns use the same 2 ms / 8 ms soft-PWM chop (20% duty,
+ * 100 Hz envelope).  Audibility distinction comes from total burst length:
+ * leak = 200 ms, low-batt = 100 ms, power-up = 80 ms.
+ *
+ * NOTE: on_ms must stay >= 2.  At on_ms=1 the UTIL_TIMER alarm hits its
+ * 3-tick RTC-subsecond floor and the sequencer rapid-fires the pattern
+ * tick task hard enough to starve other tasks (logs stop arriving in
+ * Debug builds — confirmed empirically). */
+static const beep_pattern_t pattern_leak    = { .on_ms = 2, .off_ms = 8, .repeat = 20, .cycle_ms = 8000  };
+static const beep_pattern_t pattern_lowbatt = { .on_ms = 2, .off_ms = 8, .repeat = 10, .cycle_ms = 30000 };
+static const beep_pattern_t pattern_powerup = { .on_ms = 2, .off_ms = 8, .repeat = 8,  .cycle_ms = 0     };
 
 /* ========== Engine state ========== */
 
