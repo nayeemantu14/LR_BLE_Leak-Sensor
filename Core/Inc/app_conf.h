@@ -368,11 +368,12 @@ typedef enum
   CFG_TASK_SEND_NOTIF_ID,
   CFG_TASK_MEAS_REQ_ID,
   CFG_TASK_LEAK_PROCESS,
-  CFG_TASK_ALERT_TICK,
-  CFG_TASK_ALERT_OFF,
+  CFG_TASK_ALERT_TICK,    /* reserved (legacy app_alert state machine; kept to preserve enum positions) */
+  CFG_TASK_ALERT_OFF,     /* reserved */
   CFG_TASK_LR_SWITCH,
   CFG_TASK_BATT_READ,
-  CFG_TASK_LOWBATT_BEEP,
+  CFG_TASK_LOWBATT_BEEP,  /* reserved */
+  CFG_TASK_PATTERN_TICK,
   /* USER CODE END CFG_Task_Id_t */
   CFG_TASK_NBR /* Shall be LAST in the list */
 } CFG_Task_Id_t;

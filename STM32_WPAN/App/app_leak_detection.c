@@ -60,7 +60,6 @@ static uint8_t a_EleakAdvData[23] = {
 static Adv_Set_t eleak_adv_set;
 static UTIL_TIMER_Object_t leak_debounce_timer;
 static UTIL_TIMER_Object_t lr_debounce_timer;
-static UTIL_TIMER_Object_t powerup_beep_timer;
 static uint8_t leak_state;        /* 0 = no leak, 1 = leak */
 static uint8_t a_peeraddr[8];
 static volatile uint8_t init_done; /* gates EXTI callbacks until APP_LEAK_Init completes */
@@ -69,7 +68,6 @@ static void Leak_Process_Task(void);
 static void LR_Switch_Task(void);
 static void Leak_Debounce_Cb(void *arg);
 static void LR_Debounce_Cb(void *arg);
-static void Powerup_Beep_Cb(void *arg);
 
 void APP_LEAK_Init(void)
 {
@@ -82,7 +80,6 @@ void APP_LEAK_Init(void)
   /* Create debounce timers */
   UTIL_TIMER_Create(&leak_debounce_timer, 0, UTIL_TIMER_ONESHOT, Leak_Debounce_Cb, NULL);
   UTIL_TIMER_Create(&lr_debounce_timer, 0, UTIL_TIMER_ONESHOT, LR_Debounce_Cb, NULL);
-  UTIL_TIMER_Create(&powerup_beep_timer, 0, UTIL_TIMER_ONESHOT, Powerup_Beep_Cb, NULL);
 
   /* Read LR_BUT pin to select PHY: GND = Coded PHY (Long Range), HIGH = 1M PHY */
   uint8_t lr_mode = (HAL_GPIO_ReadPin(LR_BUT_GPIO_Port, LR_BUT_Pin) == GPIO_PIN_RESET) ? 1 : 0;
@@ -164,12 +161,9 @@ void APP_LEAK_Init(void)
   leak_state = 0;
   a_EleakAdvData[18] = 0;
 
-  /* Power-up indication beep (500 ms buzzer + LED).  Block Stop1 while the
-   * buzzer drives so the audio is clean; Powerup_Beep_Cb releases the hold. */
-  APP_ALERT_BlockLPM();
-  HAL_GPIO_WritePin(Buzze_GPIO_Port, Buzze_Pin, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(Alarm_Led_GPIO_Port, Alarm_Led_Pin, GPIO_PIN_SET);
-  UTIL_TIMER_StartWithPeriod(&powerup_beep_timer, 500);
+  /* Power-up indication beep — short single chirp via alert engine.
+   * If a leak is detected immediately below, the leak pattern preempts. */
+  APP_ALERT_PowerUpBeep();
   LOG_INFO_APP(">> LEAK: Power-up beep\n");
 
   /* Check initial pin state — detect leak already present at power-up.
@@ -249,25 +243,6 @@ static void LR_Debounce_Cb(void *arg)
 {
   (void)arg;
   UTIL_SEQ_SetTask(1U << CFG_TASK_LR_SWITCH, CFG_SEQ_PRIO_0);
-}
-
-/**
- * @brief  Power-up beep timer callback — turns off buzzer/LED after 500 ms.
- * @note   Timer ISR context.  GPIO writes are safe from ISR.
- *         If a leak was detected at power-up, the leak alert now owns the
- *         buzzer/LED, so we skip turning them off.
- */
-static void Powerup_Beep_Cb(void *arg)
-{
-  (void)arg;
-  if (!leak_state)
-  {
-    HAL_GPIO_WritePin(Buzze_GPIO_Port, Buzze_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(Alarm_Led_GPIO_Port, Alarm_Led_Pin, GPIO_PIN_RESET);
-  }
-  /* Release the LPM hold whether or not we turned the buzzer off — if a
-   * leak is now active, the alert state machine has its own LPM hold. */
-  APP_ALERT_ReleaseLPM();
 }
 
 /**
