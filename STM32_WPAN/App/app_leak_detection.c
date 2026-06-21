@@ -8,9 +8,9 @@
 #include "app_alert.h"
 #include "ble_core.h"
 
-#define ELEAK_FW_MAJOR  0
-#define ELEAK_FW_MINOR  1
-#define ELEAK_FW_PATCH  0
+#define ELEAK_FW_MAJOR  1
+#define ELEAK_FW_MINOR  0
+#define ELEAK_FW_PATCH  1
 
 /* Debounce period in ms.  Must exceed the longest RF coupling glitch
  * (~1.5 ms from BLE TX at +10 dBm on the weak 390 KOhm pull-up). */
