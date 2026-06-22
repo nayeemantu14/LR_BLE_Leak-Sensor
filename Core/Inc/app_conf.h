@@ -374,6 +374,11 @@ typedef enum
   CFG_TASK_BATT_READ,
   CFG_TASK_LOWBATT_BEEP,  /* reserved */
   CFG_TASK_PATTERN_TICK,
+  CFG_TASK_LEAK_HEARTBEAT, /* Gate 4 power redesign: periodic adv heartbeat burst.
+                            * Appended (not inserted) — the sequencer callback array
+                            * is sized by UTIL_SEQ_CONF_TASK_NBR (32), not CFG_TASK_NBR,
+                            * so this shifts no existing task id. */
+  CFG_TASK_BURST_RETRY,    /* Gate 4 Phase 3b: retry a failed bounded-burst enable. */
   /* USER CODE END CFG_Task_Id_t */
   CFG_TASK_NBR /* Shall be LAST in the list */
 } CFG_Task_Id_t;

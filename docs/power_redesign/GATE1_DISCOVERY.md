@@ -42,9 +42,10 @@ on PB7 triggers `NVIC_SystemReset()` to re-latch the mode. (`app_leak_detection.
 | Link layer | Synopsys DWC_ble154combo **2.00a-lca04/05**; `ll_sys` 1.0.0 | ✅ `ll_fw_config.h:1; ll_version.h:25-27` |
 | Built variant | **`BLE_STACK_BASIC_PLUS_FEATURES`** in the **STM32CubeIDE** project (links Basic-Plus libs, `ble_basic_plus` LL config); `.ioc` `BLE_STACK_TYPE_BASIC_PLUS` | ✅ `STM32CubeIDE/.cproject:48,80,109; .ioc:336` |
 
-⚠️ **Build-config inconsistency:** the **Keil/IAR/.mxproject** configs define `BLE_STACK_BASIC_FEATURES`
-(a *different, smaller* variant). Only CubeIDE builds Basic-Plus. **Confirm which toolchain produces the
-production binary** before relying on any Basic-Plus-only feature. (✅ `.mxproject:7,17; MDK-ARM/*.uvprojx:338; EWARM/*.ewp:239`)
+✅ **Production toolchain = STM32CubeIDE (user-confirmed)** → the shipping binary is **Basic-Plus**, so
+extended advertising is in the production feature set and **periodic-adv / PAwR are out**. The Keil/IAR/
+`.mxproject` configs (which define the smaller `BLE_STACK_BASIC_FEATURES`) are non-production and can be
+ignored for feasibility. (`.mxproject:7,17; MDK-ARM/*.uvprojx:338; EWARM/*.ewp:239`)
 
 ### Feature matrix (compiled-in?)
 | Feature | Sensor (`ble_basic_plus`) | Hub (NimBLE / ESP-IDF 5.5.1) |
@@ -107,10 +108,12 @@ electrode.
 | Core between adv events | **Sleeps in Stop1 between individual adv events** (not held awake across the window). Custom USER-CODE in `UTIL_SEQ_PreIdle` calls `APP_SYS_BLE_EnterDeepSleep()` so the **radio LL deep-sleeps before** Stop1 — *"else radio clocks stay alive, idle current ~2.5 mA"* | ✅ `app_entry.c:485-544` |
 | LPM blocker | Buzzer holds **Sleep** (CPU off, clocks on — not Stop1) during each ~2 ms tone pulse (Stop1 transients corrupt the magnetic indicator) | ✅ `app_alert.c:11-21, 215-223` |
 
-> **Redesign opportunity (not decided here):** the design is at **Stop1**, not Stop2/Standby. A burst/sleep
-> model would idle with **no active advertising between bursts**, opening the door to a deeper mode (Stop2
-> retaining EXTI + RTC). **Whether Stop2 wakes from EXTI13 on this WBA5M silicon and retains the needed
-> state is a Gate-2 / bench item.** 🔬
+> **Redesign opportunity (not decided here):** the design is at **Stop1**, the deepest EXTI-wake mode.
+> A burst/sleep model would idle with **no active advertising between bursts** — but the lever is **cutting
+> the radio (advertising) energy term**, not reaching a deeper sleep.
+> **⚠️ CORRECTED IN GATE 2:** STM32WBA5x has **no Stop2** mode (ladder = Run/Sleep/Stop0/**Stop1**/Standby);
+> the earlier "reach Stop2" phrasing was an STM32WB-valve carryover. **Stop1 is the floor** and it already
+> wakes from EXTI; **Standby does not wake from EXTI** so it stays disqualified. See `GATE2_RESEARCH.md` §1/§3.
 
 ---
 
@@ -121,7 +124,7 @@ electrode.
 | Type | Continuous (`Duration=0`, `Max_Ext_Adv_Events=0`); 1M = ADV_SCAN_IND (scannable, non-conn), Coded = ext non-conn/non-scannable | ✅ `app_leak_detection.c:102-149` |
 | Interval | min 500 / max 700 × 0.625 ms = **312.5 – 437.5 ms** | ✅ `:106` |
 | Channels | 37 + 38 + 39 (all primary) | ✅ `:107` |
-| TX power | index **`0x1F`** — ⚠️ documented as both **"+10 dBm"** (adv config + TX-Power AD) and **"5.6 dBm"** (`app_conf.h:42`). Power table has a +10 dBm entry. **Resolve on RF bench.** | 🔬 `:112; app_conf.h:42; power_table.c:40-72` |
+| TX power | **`0x1F` = 5.6 dBm** (user-confirmed via the CubeIDE `CFG_TX_POWER` dropdown; +10 dBm would be `0x23`). The `app_leak_detection.c` "+10 dBm" comments are **incorrect**. `CFG_TX_POWER` (5.6 dBm) is the global radio power; the leak adv passes the same `0x1F` as `Adv_TX_Power` — taken as 5.6 dBm (on-air value confirmable by RSSI/sniffer, minor). | ✅ `:112; app_conf.h:42; power_table.c` |
 | Payload | fixed **23 bytes**, pushed COMPLETE; no scan-response | ✅ `:52-58, 128-133` |
 
 > ⚠️ The `app_conf.h` `ADV_INTERVAL_MIN/MAX` macros (500/700 interpreted as **ms**) feed only the *dead*
@@ -177,7 +180,7 @@ Everything else is negligible in the dry/idle state.
 |---|---|---|
 | `Q_adv` (charge per 3-channel adv event @ `0x1F`, incl. ramp + 1M scan-listen) | bench (current probe) or WBA5x radio-current datasheet table | 🔬 |
 | Stop1 sleep leakage (µA) on this WBA5M | datasheet typ + bench | 🔬 |
-| True TX dBm of `0x1F` (+10 vs +5.6) | RF bench / ST power table decode | 🔬 |
+| ~~True TX dBm of `0x1F`~~ | **RESOLVED: 5.6 dBm** (CubeIDE `CFG_TX_POWER`) | ✅ |
 | Radio-LL deep-sleep actually engaging (else ~2.5 mA) | bench (the code asserts it; verify) | 🔬 |
 | TPS63900 Iq + efficiency at this load profile | TI datasheet + bench | 🔬 |
 | CR2032 usable mAh under ~375 ms pulse load (vs 225 mAh nominal) | bench / cell derating (see §D pulse work) | 🔬 |
@@ -193,8 +196,8 @@ Everything else is negligible in the dry/idle state.
 
 ## Headline observations for the redesign (no decisions made here)
 
-1. **Continuous +10 dBm advertising every ~375 ms is the dominant draw** and the single biggest lever
-   (cadence ↓, TX power ↓, burst-then-sleep).
+1. **Continuous 5.6 dBm advertising every ~375 ms is the dominant draw.** The biggest lever is
+   **cadence / burst-then-sleep** (primary); TX power (already a moderate 5.6 dBm) is a secondary lever.
 2. **Leak is not bursted** — a leak just flips adv byte `[18]` into the continuous stream, so worst-case
    leak→hub latency ≈ debounce(50 ms) + adv interval(≤437 ms) + hub 50 %-duty scan(≤100 ms) ≈ **~0.6 s**.
    A redesign that adds sleep between bursts must **decouple the leak path** so this does not regress.
@@ -209,10 +212,13 @@ Everything else is negligible in the dry/idle state.
    contract.
 
 ## Open items to confirm (carried into Gate 2/3)
-- 🔬 Idle average current (anchors everything) · per-event `Q_adv` · Stop1 leakage · true TX dBm of `0x1F`
-  · radio-LL deep-sleep engaging · TPS63900 Iq/efficiency · CR2032 usable mAh under pulse.
+- 🔬 Idle average current (anchors everything) · per-event `Q_adv` · Stop1 leakage · radio-LL deep-sleep
+  engaging · TPS63900 Iq/efficiency · CR2032 usable mAh under pulse.
 - 📐 Leak electrode wiring + 390 K value + standing wet current · battery divider ratio (fw assumes 2.0).
-- ❓ **Production toolchain** (CubeIDE Basic-Plus vs Keil/IAR Basic) · Coded-PHY S-coding actually on air.
+- ❓ Coded-PHY S-coding actually on air (S=8 vs S=2) — affects long-range link budget.
+
+**Resolved by user (2026-06-22):** TX power `0x1F` = **5.6 dBm** (not +10 dBm). Production toolchain =
+**STM32CubeIDE** → shipping stack is **Basic-Plus** (extended adv in; periodic-adv / PAwR out).
 
 ---
 **Gate 1 complete — read-only, no firmware changed. Awaiting your review before Gate 2.**

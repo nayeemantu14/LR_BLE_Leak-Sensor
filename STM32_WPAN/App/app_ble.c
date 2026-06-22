@@ -576,7 +576,15 @@ SVCCTL_UserEvtFlowStatus_t SVCCTL_App_Notification(void *p_Pckt)
           break; /* HCI_LE_CONNECTION_COMPLETE_SUBEVT_CODE */
         }
         /* USER CODE BEGIN SUBEVENT */
-
+        case HCI_LE_ADVERTISING_SET_TERMINATED_SUBEVT_CODE:
+        {
+          /* Bounded advertising burst (leak edge / heartbeat) expired — hand
+           * back to the leak module so it can re-arm the resting adv state. */
+          hci_le_advertising_set_terminated_event_rp0 *p_adv_term;
+          p_adv_term = (hci_le_advertising_set_terminated_event_rp0 *) p_meta_evt->data;
+          APP_LEAK_OnAdvTerminated(p_adv_term->Advertising_Handle, p_adv_term->Status);
+          break; /* HCI_LE_ADVERTISING_SET_TERMINATED_SUBEVT_CODE */
+        }
         /* USER CODE END SUBEVENT */
         default:
         {
